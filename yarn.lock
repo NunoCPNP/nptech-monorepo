@@ -1514,6 +1514,11 @@
   dependencies:
     "@garment/logger" "^0.13.8"
 
+"@garment/plugin-runner-eslint@^0.13.10":
+  version "0.13.10"
+  resolved "https://registry.yarnpkg.com/@garment/plugin-runner-eslint/-/plugin-runner-eslint-0.13.10.tgz#82696a9c3d2416e1701935406fb05522479cdba1"
+  integrity sha512-Ksd1CIQFCp70BQg7ZisKdVteF+uPKyIYZTGxulwZmCaBkCFoOr8+3FGWxWTTkhHg0yn1cCJ1HOw+8jqxKfeAzA==
+
 "@garment/plugin-runner-jest@^0.13.10":
   version "0.13.10"
   resolved "https://registry.yarnpkg.com/@garment/plugin-runner-jest/-/plugin-runner-jest-0.13.10.tgz#27af0bfbb6974bf462401d7f12f52bf4a0506faa"

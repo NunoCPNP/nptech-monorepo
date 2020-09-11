@@ -23,6 +23,14 @@
           "options": {
             "configFile": "{{projectDir}}/jest.config.js"
           }
+        },
+        "lint": {
+          "runner": "eslint",
+          "input": "{{projectDir}}/src/**/*.js",
+          "output": "{{projectDir}}/src",
+          "options": {
+            "configFile": ".eslintrc.js"
+          }
         }
       }
     },
