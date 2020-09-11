@@ -1,0 +1,35 @@
+{
+  "name": "@nptech/api",
+  "version": "0.1.0",
+  "description": "Node API",
+  "main": "src/index.js",
+  "author": "Nuno Pereira",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Nuno Pereira",
+      "email": "hello@nunopereira.tech",
+      "url": "https://www.nunopereira.tech"
+    }
+  ],
+  "scripts": {
+    "prod": "cross-env NODE_ENV=production node src/index",
+    "dev": "cross-env NODE_ENV=development nodemon src/index"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.3",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.4.11"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/@garment/workspace/schemas/config.schema.json",
+  "presets": {
+    "next-app": {
+      "tasks": {
+        "start": {
+          "runner": "next",
+          "options": {
+            "appPath": "{{projectDir}}",
+            "command": "dev"
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "portfolio": {
+      "path": "projects/portfolio",
+      "extends": ["next-app"],
+      "tasks": {
+        "test": {
+          "runner": "jest",
+          "options": {
+            "configFile": "{{projectDir}}/jest.config.js"
+          }
+        }
+      }
+    },
+    "soon": {
+      "path": "projects/soon",
+      "extends": ["next-app"]
+    }
+  },
+  "schematics": []
+}

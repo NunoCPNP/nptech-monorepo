@@ -1,0 +1,11 @@
+.DS_Store
+.vscode/
+.next
+.idea
+
+node_modules/
+coverage/
+*.log
+
+config.env
+.env

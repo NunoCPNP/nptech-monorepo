@@ -1,0 +1,11 @@
+*/** @nunocpnp
+
+apps/**
+packages/**
+components/**
+
+apps/pf-app/**
+apps/pf-api/**
+
+packages/configs/**
+packages/logger/**

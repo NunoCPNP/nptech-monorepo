@@ -1,0 +1,25 @@
+name: Defaul Branch Workflow
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  installing:
+    name: Running default branch workflow across mono-repo
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Running install ...
+        run: yarn
+
+      - name: Running linters ...
+        run: yarn lint
+
+      - name: Running tests ...
+        run: yarn test

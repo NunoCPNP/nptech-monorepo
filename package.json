@@ -1,0 +1,45 @@
+{
+  "name": "nptech-monorepo",
+  "version": "0.1.0",
+  "description": "nunopereira.tech domain mono repository",
+  "main": "index.js",
+  "author": {
+    "name": "Nuno Pereira",
+    "email": "hello@nunopereira.tech",
+    "url": "https://www.nunopereira.tech"
+  },
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "projects/*",
+    "shared/*"
+  ],
+  "scripts": {
+    "preinstall": "node checkYarn.js",
+    "version": "lerna version --conventional-commits --yes",
+    "version:minor": "lerna version minor --conventional-commits --yes"
+  },
+  "lint-staged": {
+    "{**/*.js, !/*.js}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@garment/cli": "^0.13.10",
+    "@garment/plugin-runner-jest": "^0.13.10",
+    "@garment/plugin-runner-next": "^0.13.8",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^4.2.5",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.7.0",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}

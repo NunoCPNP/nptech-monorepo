@@ -1,0 +1,14 @@
+{
+  "name": "@nptech/logger",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "author": "Nuno Pereira",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Nuno Pereira",
+      "email": "hello@nunopereira.tech",
+      "url": "https://www.nunopereira.tech"
+    }
+  ]
+}

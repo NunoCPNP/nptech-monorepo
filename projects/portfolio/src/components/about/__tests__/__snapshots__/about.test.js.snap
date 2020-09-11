@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<About /> spec Should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-c64meg"
+    data-testid="about-component"
+  >
+    <div />
+  </div>
+</DocumentFragment>
+`;

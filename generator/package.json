@@ -1,0 +1,13 @@
+{
+  "name": "@nptech/generator",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Nuno Pereira",
+  "license": "MIT",
+  "scripts": {
+    "plop": "plop"
+  },
+  "dependencies": {
+    "plop": "^2.7.4"
+  }
+}

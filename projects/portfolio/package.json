@@ -1,0 +1,45 @@
+{
+  "name": "@nptech/portfolio",
+  "version": "0.1.0",
+  "description": "Portfolio Next App",
+  "main": "src/pages/index.js",
+  "author": "Nuno Pereira",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Nuno Pereira",
+      "email": "hello@nunopereira.tech",
+      "url": "https://www.nunopereira.tech"
+    }
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest --verbose",
+    "test:watch": "jest --verbose --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
+    "lint:css": "stylelint './src/**/*.js'"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.34",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
+    "framer-motion": "^2.4.1",
+    "lodash.debounce": "^4.0.8",
+    "next": "^9.5.2",
+    "next-google-fonts": "^1.2.1",
+    "next-transpile-modules": "^4.1.0",
+    "nprogress": "^0.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-intersection-observer": "^8.27.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^10.4.8",
+    "babel-jest": "^26.3.0",
+    "jest": "^26.4.0"
+  }
+}

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> spec Should match snapshot 1`] = `
+<DocumentFragment>
+  <header
+    data-testid="header"
+  >
+    <nav
+      class="css-15gg7lv"
+      data-testid="navbar"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="navbar-logo"
+        >
+          <div />
+        </div>
+      </div>
+    </nav>
+  </header>
+</DocumentFragment>
+`;

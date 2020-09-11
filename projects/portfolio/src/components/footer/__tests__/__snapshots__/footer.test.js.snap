@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> spec Should match snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="css-76r3pw"
+    data-testid="footer"
+  >
+    <span>
+      Made with love by Nuno Pereira
+    </span>
+  </footer>
+</DocumentFragment>
+`;
