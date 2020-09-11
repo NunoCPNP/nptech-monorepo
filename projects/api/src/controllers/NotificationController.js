@@ -6,8 +6,8 @@ module.exports = {
       await sendEmail({
         from: 'Nuno Pereira <nunopereira.dev@gmail.com>',
         to: 'hello@nunopereira.tech',
-        subject: 'Sample subject ',
-        message: '<p>Some random text to see if everything is working</p>',
+        subject: request.body.subject,
+        message: request.body.message,
       })
 
       response.status(200).send({
