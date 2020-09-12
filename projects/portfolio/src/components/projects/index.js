@@ -1,21 +1,29 @@
+import PropTypes from 'prop-types'
+
 import Card from '../card'
 
-import { useControllers } from '../../context/controllers'
-
-const Projects = () => {
-  const [state, dispatch] = useControllers()
-  const { data } = state
-
+const Projects = ({ projects, setProject }) => {
   return (
     <>
-      {data.projects &&
-        data.projects.map(({ id, image, alt }) => (
-          <div key={id} onClick={() => dispatch({ type: 'SET_SELECTED_PROJECT', payload: id })}>
+      {projects &&
+        projects.map(({ id, image, alt }) => (
+          <div
+            key={id}
+            onClick={() => {
+              const project = projects.filter((p) => p.id === id)[0]
+              setProject(project)
+            }}
+          >
             <Card img={image} alt={alt} />
           </div>
         ))}
     </>
   )
+}
+
+Projects.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setProject: PropTypes.func.isRequired,
 }
 
 export default Projects

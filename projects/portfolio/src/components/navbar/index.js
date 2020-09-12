@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { useControllersState } from '../../context/controllers'
 import { Wrapper } from './styles'
 
 import BurgerIcon from '../burger-icon'
@@ -26,20 +26,18 @@ const containerItems = {
   },
 }
 
-const Navbar = () => {
-  const { data } = useControllersState()
-
+const Navbar = ({ navbar }) => {
   return (
     <Wrapper data-testid="navbar">
       <div className="container">
         <div className="navbar-logo">
           <div></div>
         </div>
-        {data.navbar && (
+        {navbar && (
           <>
             <div className="navbar-items">
               <motion.ul variants={container} initial="hidden" animate="visible">
-                {data.navbar.map((item) => (
+                {navbar.map((item) => (
                   <motion.li key={item.id} variants={containerItems}>
                     <Link href={item.link}>
                       {item.type === 'standard' ? <a>{item.label}</a> : <a className="extra">{item.label}</a>}
@@ -54,6 +52,10 @@ const Navbar = () => {
       </div>
     </Wrapper>
   )
+}
+
+Navbar.propTypes = {
+  navbar: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default Navbar

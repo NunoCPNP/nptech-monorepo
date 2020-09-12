@@ -11,7 +11,7 @@ export const StyledAnchor = styled('a')`
   border-radius: 1rem;
 `
 
-export const Container = styled('div')`
+export const Container = styled.div`
   display: flex;
   align-items: center;
 

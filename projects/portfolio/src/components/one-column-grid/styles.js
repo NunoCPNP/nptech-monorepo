@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const Container = styled('div')`
+export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(${(props) => props.items}, 1fr);
   grid-gap: ${(props) => props.gap}rem;
@@ -14,7 +14,7 @@ export const Container = styled('div')`
   }
 `
 
-export const Wrapper = styled('div')`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 `

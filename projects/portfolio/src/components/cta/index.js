@@ -1,5 +1,5 @@
+import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
-import { useControllersState } from '../../context/controllers'
 import { ButtonsContainer, CTAText, Wrapper } from './styles'
 
 import AnchorButton from '../anchor-button'
@@ -24,9 +24,7 @@ const textAnimation = {
   },
 }
 
-const CTA = () => {
-  const { data } = useControllersState()
-
+const CTA = ({ cta }) => {
   return (
     <Wrapper data-testid="cta-component">
       <motion.img
@@ -37,16 +35,16 @@ const CTA = () => {
         alt="Call to Action Image"
       />
       <CTAText variants={textAnimation} initial="hidden" animate="visible">
-        {data.cta && (
+        {cta && (
           <>
             <h3>
-              <span>{data.cta[0]}</span>
+              <span>{cta[0]}</span>
             </h3>
             <h2>
-              {data.cta[1]}
-              <span>{data.cta[2]}</span>
+              {cta[1]}
+              <span>{cta[2]}</span>
             </h2>
-            <h3>{data.cta[3]}</h3>
+            <h3>{cta[3]}</h3>
           </>
         )}
         <ButtonsContainer>
@@ -55,6 +53,10 @@ const CTA = () => {
       </CTAText>
     </Wrapper>
   )
+}
+
+CTA.propTypes = {
+  cta: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default CTA

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const StyledDiv = styled('div')`
+export const StyledDiv = styled.div`
   padding: 1rem 0;
   overflow: hidden;
   font-size: 1.7rem;
@@ -18,7 +18,7 @@ export const StyledDiv = styled('div')`
   }
 `
 
-export const ButtonContainer = styled('div')`
+export const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-top: 1.5rem;

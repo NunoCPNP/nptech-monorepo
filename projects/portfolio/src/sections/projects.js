@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
+import { useState } from 'react'
 import { motion, AnimatePresence, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { useControllersState } from '../context/controllers'
 
 import SectionTitle from '../components/section-title'
 import OneColumnGrid from '../components/one-column-grid'
@@ -9,9 +10,11 @@ import Projects from '../components/projects'
 import ProjectDetails from '../components/project-details'
 import Card from '../components/card'
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ projects }) => {
+  const [project, setProject] = useState(null)
+  console.log('-------', project)
+
   const controls = useAnimation()
-  const { selectedProject } = useControllersState()
   const [ref, inView] = useInView({
     rootMargin: '-100px',
     triggerOnce: true,
@@ -41,11 +44,11 @@ const ProjectsSection = () => {
         title="My Latest Projects"
         subTitle="Some of the latest Projects I have been working on"
       />
-      {!selectedProject ? (
+      {!project ? (
         <AnimatePresence exitBeforeEnter>
           <motion.div key="projects-list" initial={{ x: '-100vw' }} animate={{ x: 0 }} exit={{ x: '100vw' }}>
             <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
-              <Projects />
+              <Projects projects={projects} setProject={setProject} />
             </OneColumnGrid>
           </motion.div>
         </AnimatePresence>
@@ -53,14 +56,18 @@ const ProjectsSection = () => {
         <AnimatePresence exitBeforeEnter>
           <motion.div key="project-details" initial={{ x: '-100vw' }} animate={{ x: 0 }} exit={{ x: '100vw' }}>
             <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
-              <Card img={selectedProject.image} alt={selectedProject.alt} />
-              <ProjectDetails />
+              <Card img={project.image} alt={project.alt} />
+              <ProjectDetails project={project} setProject={setProject} />
             </OneColumnGrid>
           </motion.div>
         </AnimatePresence>
       )}
     </Section>
   )
+}
+
+ProjectsSection.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default ProjectsSection

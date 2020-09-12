@@ -1,13 +1,18 @@
+import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
 import CTA from '../components/cta'
 
-const HomeSection = () => {
+const HomeSection = ({ cta }) => {
   return (
     <Wrapper id="Home">
-      <CTA />
+      <CTA cta={cta} />
     </Wrapper>
   )
+}
+
+HomeSection.propTypes = {
+  cta: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default HomeSection

@@ -1,14 +1,12 @@
-import { useControllersState } from '../../context/controllers'
+import PropTypes from 'prop-types'
 import { Wrapper } from './styles'
 
-const About = () => {
-  const { data } = useControllersState()
-
+const About = ({ about }) => {
   return (
     <Wrapper data-testid="about-component">
       <div>
-        {data.about &&
-          data.about.map((paragraph, index) => (
+        {about &&
+          about.map((paragraph, index) => (
             <p key={index}>
               {paragraph.map((item) => (
                 <span key={item.id}>
@@ -20,6 +18,10 @@ const About = () => {
       </div>
     </Wrapper>
   )
+}
+
+About.propTypes = {
+  about: PropTypes.arrayOf(PropTypes.array).isRequired,
 }
 
 export default About

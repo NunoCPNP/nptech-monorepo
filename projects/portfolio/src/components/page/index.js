@@ -10,16 +10,16 @@ import Footer from '../footer'
 import SideBar from '../side-bar'
 import ThemeSwitch from '../theme-switch'
 
-const Page = ({ header = true, footer = true, title, description, children }) => {
-  const state = useControllersState()
+const Page = ({ header = true, footer = true, title, description, navbar, children }) => {
+  const { darkMode } = useControllersState()
 
   return (
-    <ThemeProvider theme={state.darkMode ? dark : light}>
+    <ThemeProvider theme={darkMode ? dark : light}>
       <SEO
         title={`${title ? `${title}` : 'Nuno Pereira'}`}
         description={`${description ? `${description}` : 'Nuno Pereira - Developer Portfolio 2020'}`}
       />
-      {header && <Header />}
+      {header && <Header navbar={navbar} />}
       <Container>{children}</Container>
       {footer && <Footer />}
       <SideBar />
@@ -30,6 +30,7 @@ const Page = ({ header = true, footer = true, title, description, children }) =>
 
 Page.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  navbar: PropTypes.arrayOf(PropTypes.object).isRequired,
   description: PropTypes.string,
   footer: PropTypes.bool,
   header: PropTypes.bool,

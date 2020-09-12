@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const Wrapper = styled('div')`
+export const Wrapper = styled.div`
   display: grid;
   padding: 0 3rem;
 

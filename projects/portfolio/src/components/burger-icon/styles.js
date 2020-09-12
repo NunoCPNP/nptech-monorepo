@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const Burger = styled('div')`
+export const Burger = styled.div`
   .burger {
     height: 3em;
     width: 3em;

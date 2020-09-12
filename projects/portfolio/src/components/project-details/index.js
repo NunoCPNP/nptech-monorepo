@@ -1,35 +1,37 @@
-import { useControllers } from '../../context/controllers'
+import PropTypes from 'prop-types'
 import { Wrapper } from './styles'
 
 import LinkButton from '../link-button'
 
-const ProjectDetails = () => {
-  const [state, dispatch] = useControllers()
-  const { selectedProject } = state
-
+const ProjectDetails = ({ project, setProject }) => {
   return (
     <>
-      {selectedProject && (
+      {project && (
         <Wrapper data-testid="project-details">
           <div className="name">
-            <h2>{selectedProject.name}</h2>
-            <span>{selectedProject.url}</span>
+            <h2>{project.name}</h2>
+            <span>{project.url}</span>
           </div>
-          {selectedProject.description.map((paragraph, index) => (
+          {project.description.map((paragraph, index) => (
             <h3 key={index}>{paragraph}</h3>
           ))}
           <ul>
-            {selectedProject.technologies.map((technology, index) => (
+            {project.technologies.map((technology, index) => (
               <li key={index}>{technology}</li>
             ))}
           </ul>
-          <div className="button-wrapper" onClick={() => dispatch({ type: 'RESET_SELECTED_PROJECT' })}>
+          <div className="button-wrapper" onClick={() => setProject(null)}>
             <LinkButton label="Go Back" />
           </div>
         </Wrapper>
       )}
     </>
   )
+}
+
+ProjectDetails.propTypes = {
+  project: PropTypes.object,
+  setProject: PropTypes.func.isRequired,
 }
 
 export default ProjectDetails

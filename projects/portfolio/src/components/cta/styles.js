@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
 
-export const Wrapper = styled('div')`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -68,6 +68,6 @@ export const CTAText = styled(motion.div)`
   }
 `
 
-export const ButtonsContainer = styled('div')`
+export const ButtonsContainer = styled.div`
   padding-top: 1.5rem;
 `

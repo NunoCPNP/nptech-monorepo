@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const Wrapper = styled('div')`
+export const Wrapper = styled.div`
   grid-column: 2 / 5;
   display: flex;
   flex-direction: column;

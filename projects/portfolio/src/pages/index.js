@@ -1,30 +1,31 @@
 import PropTypes from 'prop-types'
+import { useEffect } from 'react'
 import { info } from '@nptech/logger'
+import { useControllersState } from '../context/controllers'
 
 import { data } from '../dev-data/data'
-import { useControllersDispatch } from '../context/controllers'
 
 import Page from '../components/page'
 import HomeSection from '../sections/home'
 import AboutSection from '../sections/about'
 import ProjectsSection from '../sections/projects'
 import ContactsSection from '../sections/contacts'
+import Alert from '../components/alert'
 
-const App = (props) => {
-  const dispatch = useControllersDispatch()
+const App = ({ navbar, cta, about, technologies, projects }) => {
+  const { alerts } = useControllersState()
 
-  React.useEffect(() => {
-    dispatch({ type: 'SET_DATA', payload: props })
-
+  useEffect(() => {
     info(' // --> repo welcome message ! ')
   }, [])
 
   return (
-    <Page>
-      <HomeSection />
-      <AboutSection />
-      <ProjectsSection />
+    <Page navbar={navbar}>
+      <HomeSection cta={cta} />
+      <AboutSection about={about} />
+      <ProjectsSection projects={projects} />
       <ContactsSection />
+      {alerts.visible && <Alert type={alerts.type} message={alerts.message} />}
     </Page>
   )
 }
@@ -48,6 +49,7 @@ App.propTypes = {
   cta: PropTypes.arrayOf(PropTypes.string).isRequired,
   about: PropTypes.arrayOf(PropTypes.array).isRequired,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default App
