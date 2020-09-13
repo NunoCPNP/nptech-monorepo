@@ -1,22 +1,21 @@
 import PropTypes from 'prop-types'
+import logger from '@nptech/logger'
 import { useEffect } from 'react'
-import { info } from '@nptech/logger'
 import { useControllersState } from '../context/controllers'
-
 import { data } from '../dev-data/data'
+import { Alert } from '@nptech/components'
 
 import Page from '../components/page'
 import HomeSection from '../sections/home'
 import AboutSection from '../sections/about'
 import ProjectsSection from '../sections/projects'
 import ContactsSection from '../sections/contacts'
-import Alert from '../components/alert'
 
-const App = ({ navbar, cta, about, technologies, projects }) => {
+const App = ({ navbar, cta, about, projects }) => {
   const { alerts } = useControllersState()
 
   useEffect(() => {
-    info(' // --> repo welcome message ! ')
+    logger('info', ' // --> repo welcome message ! ', true)
   }, [])
 
   return (

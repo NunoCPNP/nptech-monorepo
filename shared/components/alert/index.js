@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Wrapper } from './styles'
 
-const Alert = ({ message }) => {
+export const Alert = ({ message }) => {
   return (
     <Wrapper data-testid="alert-component">
       <div className="text">{message}</div>
@@ -12,5 +12,3 @@ const Alert = ({ message }) => {
 Alert.propTypes = {
   message: PropTypes.string.isRequired,
 }
-
-export default Alert

@@ -1,3 +1,4 @@
 import { Loader } from './loader'
+import { Alert } from './alert'
 
-export { Loader }
+export { Loader, Alert }

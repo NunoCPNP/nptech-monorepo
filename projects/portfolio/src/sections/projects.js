@@ -12,7 +12,6 @@ import Card from '../components/card'
 
 const ProjectsSection = ({ projects }) => {
   const [project, setProject] = useState(null)
-  console.log('-------', project)
 
   const controls = useAnimation()
   const [ref, inView] = useInView({
