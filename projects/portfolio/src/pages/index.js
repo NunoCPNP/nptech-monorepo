@@ -24,7 +24,7 @@ const App = ({ navbar, cta, about, projects }) => {
       <AboutSection about={about} />
       <ProjectsSection projects={projects} />
       <ContactsSection />
-      {alerts.visible && <Alert type={alerts.type} message={alerts.message} />}
+      <Alert message={alerts.message} type={alerts.type} />
     </Page>
   )
 }
