@@ -48,7 +48,6 @@ const GlobalStyles = () => {
           font-size: 62.5%;
           font-family: 'Karla', sans-serif;
           scroll-behavior: smooth;
-          overflow-x: hidden;
         }
 
         *,

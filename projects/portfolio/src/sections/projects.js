@@ -73,4 +73,5 @@ export default ProjectsSection
 
 const Section = styled(motion.section)`
   padding-top: 5.5rem;
+  overflow: hidden;
 `
