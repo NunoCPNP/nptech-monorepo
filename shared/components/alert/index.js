@@ -13,7 +13,7 @@ export const Alert = ({ message }) => {
   return (
     <>
       <AnimatePresence>
-        {visible ? (
+        {visible & (message !== '') ? (
           <Wrapper
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

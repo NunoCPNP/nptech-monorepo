@@ -3,6 +3,6 @@ export const initialState = {
   sideBarOpen: false,
   alerts: {
     type: '',
-    message: 'Testing Message !!',
+    message: '',
   },
 }
