@@ -24,7 +24,7 @@ const Page = ({ header = true, footer = true, title, description, navbar, childr
         <main>{children}</main>
         {footer && <Footer />}
       </Wrapper>
-      <SideBar />
+      <SideBar navbar={navbar} />
       <ThemeSwitch />
     </ThemeProvider>
   )

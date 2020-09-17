@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useControllers } from '../../context/controllers'
 import { Container } from './styles'
 
-const SideBar = () => {
+const SideBar = ({ navbar }) => {
   const [state, dispatch] = useControllers()
-  const { sideBarOpen, data } = state
+  const { sideBarOpen } = state
 
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -34,7 +35,7 @@ const SideBar = () => {
         <Container initial={{ x: 600 }} animate={{ x: 100, opacity: 1 }} exit={{ x: 450, opacity: 0 }}>
           <div className="navbar-items">
             <motion.ul variants={container} initial="hidden" animate="visible">
-              {data.navbar.map((item) => (
+              {navbar.map((item) => (
                 <motion.li key={item.id} variants={containerItems}>
                   <Link href={item.link}>
                     {item.type === 'standard' ? (
@@ -51,6 +52,10 @@ const SideBar = () => {
       )}
     </AnimatePresence>
   )
+}
+
+SideBar.propTypes = {
+  navbar: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default SideBar
