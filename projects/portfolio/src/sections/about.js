@@ -21,10 +21,10 @@ const AboutSection = ({ about }) => {
   }, [controls, inView])
 
   const sectionAnimation = {
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         delay: 0.5,
       },
@@ -32,12 +32,14 @@ const AboutSection = ({ about }) => {
   }
 
   return (
-    <Section id="About" ref={ref} animate={controls} initial="hidden" variants={sectionAnimation}>
-      <SectionTitle uppercase title="About" />
-      <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
-        <About about={about} />
-      </OneColumnGrid>
-    </Section>
+    <section id="About">
+      <Wrapper ref={ref} animate={controls} initial="hidden" variants={sectionAnimation}>
+        <SectionTitle uppercase title="About" />
+        <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
+          <About about={about} />
+        </OneColumnGrid>
+      </Wrapper>
+    </section>
   )
 }
 
@@ -47,7 +49,7 @@ AboutSection.propTypes = {
 
 export default AboutSection
 
-const Section = styled(motion.section)`
+const Wrapper = styled(motion.div)`
   padding-top: 5.5rem;
-  overflow: hidden;
+  overflow-x: hidden;
 `

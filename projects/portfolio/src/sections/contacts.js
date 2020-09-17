@@ -20,10 +20,10 @@ const ContactsSection = () => {
   }, [controls, inView])
 
   const sectionAnimation = {
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         delay: 0.5,
       },
@@ -31,18 +31,20 @@ const ContactsSection = () => {
   }
 
   return (
-    <Section id="Contacts" ref={ref} animate={controls} initial="hidden" variants={sectionAnimation}>
-      <SectionTitle title="Contacts" subTitle="Have a question or want to work together ?" uppercase />
-      <OneColumnGrid items={2} breakTo={1} gap={4} maxWidth={140} padding={4} top={4}>
-        <ContactForm />
-      </OneColumnGrid>
-    </Section>
+    <section id="Contacts">
+      <Wrapper ref={ref} animate={controls} initial="hidden" variants={sectionAnimation}>
+        <SectionTitle title="Contacts" subTitle="Have a question or want to work together ?" uppercase />
+        <OneColumnGrid items={2} breakTo={1} gap={4} maxWidth={140} padding={4} top={4}>
+          <ContactForm />
+        </OneColumnGrid>
+      </Wrapper>
+    </section>
   )
 }
 
 export default ContactsSection
 
-const Section = styled(motion.section)`
+const Wrapper = styled(motion.div)`
   padding-top: 5.5rem;
-  overflow: hidden;
+  overflow-x: hidden;
 `

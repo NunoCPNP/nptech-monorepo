@@ -23,11 +23,12 @@ Router.events.on('routeChangeError', () => {
   nprogress.done()
 })
 
-export function reportWebVitals(metric) {
-  if (metric.label === 'web-vital') {
-    console.log(metric)
-  }
-}
+//! Metrics
+// export function reportWebVitals(metric) {
+//   if (metric.label === 'web-vital') {
+//     console.log(metric)
+//   }
+// }
 
 class MyApp extends App {
   render() {

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { ThemeProvider } from 'emotion-theming'
 import { useControllersState } from '../../context/controllers'
 import { dark, light } from '../../styles/themes'
-import { Container } from './styles'
+import { Wrapper } from './styles'
 
 import SEO from '../seo'
 import Header from '../header'
@@ -17,11 +17,13 @@ const Page = ({ header = true, footer = true, title, description, navbar, childr
     <ThemeProvider theme={darkMode ? dark : light}>
       <SEO
         title={`${title ? `${title}` : 'Nuno Pereira'}`}
-        description={`${description ? `${description}` : 'Nuno Pereira - Developer Portfolio 2020'}`}
+        description={`${description ? `${description}` : 'Nuno Pereira - Front End Developer Portfolio 2020'}`}
       />
-      {header && <Header navbar={navbar} />}
-      <Container>{children}</Container>
-      {footer && <Footer />}
+      <Wrapper>
+        {header && <Header navbar={navbar} />}
+        <main>{children}</main>
+        {footer && <Footer />}
+      </Wrapper>
       <SideBar />
       <ThemeSwitch />
     </ThemeProvider>

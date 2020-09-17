@@ -5,9 +5,9 @@ import CTA from '../components/cta'
 
 const HomeSection = ({ cta }) => {
   return (
-    <Wrapper id="Home">
+    <Section id="Home">
       <CTA cta={cta} />
-    </Wrapper>
+    </Section>
   )
 }
 
@@ -17,10 +17,10 @@ HomeSection.propTypes = {
 
 export default HomeSection
 
-const Wrapper = styled('section')`
+const Section = styled.section`
   padding-top: 5.5rem;
   min-height: 100vh;
   display: grid;
   align-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
 `

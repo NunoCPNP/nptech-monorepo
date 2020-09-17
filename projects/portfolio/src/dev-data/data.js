@@ -53,7 +53,7 @@ export const data = () => {
       ],
       [
         { id: uuidv4(), data: 'Building ', styled: false },
-        { id: uuidv4(), data: 'state-of-the-art, ', styled: true },
+        { id: uuidv4(), data: 'modern, ', styled: true },
         { id: uuidv4(), data: 'easy to use, ', styled: true },
         { id: uuidv4(), data: 'user-friendly ', styled: true },
         { id: uuidv4(), data: 'websites ', styled: true },

@@ -37,31 +37,33 @@ const ProjectsSection = ({ projects }) => {
   }
 
   return (
-    <Section id="Projects" ref={ref} animate={controls} initial="hidden" variants={sectionAnimation}>
-      <SectionTitle
-        uppercase
-        title="My Latest Projects"
-        subTitle="Some of the latest Projects I have been working on"
-      />
-      {!project ? (
-        <AnimatePresence exitBeforeEnter>
-          <motion.div key="projects-list" initial={{ x: '-100vw' }} animate={{ x: 0 }} exit={{ x: '100vw' }}>
-            <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
-              <Projects projects={projects} setProject={setProject} />
-            </OneColumnGrid>
-          </motion.div>
-        </AnimatePresence>
-      ) : (
-        <AnimatePresence exitBeforeEnter>
-          <motion.div key="project-details" initial={{ x: '-100vw' }} animate={{ x: 0 }} exit={{ x: '100vw' }}>
-            <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
-              <Card img={project.image} alt={project.alt} />
-              <ProjectDetails project={project} setProject={setProject} />
-            </OneColumnGrid>
-          </motion.div>
-        </AnimatePresence>
-      )}
-    </Section>
+    <section id="Projects">
+      <Wrapper ref={ref} animate={controls} initial="hidden" variants={sectionAnimation}>
+        <SectionTitle
+          uppercase
+          title="My Latest Projects"
+          subTitle="Some of the latest Projects I have been working on"
+        />
+        {!project ? (
+          <AnimatePresence exitBeforeEnter>
+            <motion.div key="projects-list" initial={{ x: '-100vw' }} animate={{ x: 0 }} exit={{ x: '100vw' }}>
+              <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
+                <Projects projects={projects} setProject={setProject} />
+              </OneColumnGrid>
+            </motion.div>
+          </AnimatePresence>
+        ) : (
+          <AnimatePresence exitBeforeEnter>
+            <motion.div key="project-details" initial={{ x: '-100vw' }} animate={{ x: 0 }} exit={{ x: '100vw' }}>
+              <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
+                <Card img={project.image} alt={project.alt} />
+                <ProjectDetails project={project} setProject={setProject} />
+              </OneColumnGrid>
+            </motion.div>
+          </AnimatePresence>
+        )}
+      </Wrapper>
+    </section>
   )
 }
 
@@ -71,7 +73,7 @@ ProjectsSection.propTypes = {
 
 export default ProjectsSection
 
-const Section = styled(motion.section)`
+const Wrapper = styled(motion.div)`
   padding-top: 5.5rem;
-  overflow: hidden;
+  overflow-x: hidden;
 `

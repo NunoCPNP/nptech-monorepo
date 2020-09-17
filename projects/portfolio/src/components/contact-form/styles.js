@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 
 export const StyledDiv = styled.div`
   padding: 1rem 0;
-  overflow: hidden;
   font-size: 1.7rem;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.formLine};
   color: ${({ theme }) => theme.colors.formFont};
@@ -21,5 +20,5 @@ export const StyledDiv = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
 `

@@ -30,7 +30,6 @@ export const Wrapper = styled.div`
     right: 0px;
     bottom: 0px;
     left: 0px;
-    overflow: hidden;
     opacity: 1;
     background-color: #fff;
     box-shadow: 0px 2px 10px 0px rgba(250, 250, 250, 0.1);
