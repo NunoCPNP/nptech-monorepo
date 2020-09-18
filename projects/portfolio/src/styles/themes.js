@@ -29,6 +29,8 @@ export const dark = {
     linkButtonTextHover: `${colors.darkGrey}`,
     footerColor: `${colors.lightGrey}`,
     footerBackground: `${colors.darkGrey}`,
+    messageColor: `${colors.darkGrey}`,
+    messageBackground: `${colors.yellow}`,
   },
 }
 
@@ -61,5 +63,7 @@ export const light = {
     linkButtonText: '',
     footerColor: ``,
     footerBackground: ``,
+    messageColor: '',
+    messageBackground: '',
   },
 }

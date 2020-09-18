@@ -6,7 +6,6 @@ export const StyledAnchor = styled('a')`
   padding: 0.2rem 1rem;
   color: ${({ theme }) => theme.colors.anchorButtonText};
   font-size: 1.2rem;
-  font-weight: 600;
   background-color: ${({ theme }) => theme.colors.anchorButtonBackground};
   border-radius: 1rem;
 `

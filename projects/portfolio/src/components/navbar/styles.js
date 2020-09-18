@@ -41,6 +41,7 @@ export const Wrapper = styled('nav')`
       color: ${({ theme }) => theme.colors.extraText};
       border-radius: 1rem;
       padding: 0.1rem 1.3rem;
+      font-weight: 700;
     }
 
     @media only screen and (max-width: 768px) {

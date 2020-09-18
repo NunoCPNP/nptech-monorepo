@@ -66,7 +66,6 @@ export const Button = styled('button')`
     margin: 0 0 0 1.85rem;
     color: ${({ theme }) => theme.colors.linkButtonText};
     font-size: 1.2rem;
-    font-weight: 600;
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;

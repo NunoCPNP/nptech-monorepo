@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion'
 import SectionTitle from '../components/section-title'
 import OneColumnGrid from '../components/one-column-grid'
 import ContactForm from '../components/contact-form'
+import Message from '../components/message'
 
 const ContactsSection = () => {
   const controls = useAnimation()
@@ -36,6 +37,7 @@ const ContactsSection = () => {
         <SectionTitle title="Contacts" subTitle="Have a question or want to work together ?" uppercase />
         <OneColumnGrid items={2} breakTo={1} gap={4} maxWidth={140} padding={4} top={4}>
           <ContactForm />
+          <Message />
         </OneColumnGrid>
       </Wrapper>
     </section>

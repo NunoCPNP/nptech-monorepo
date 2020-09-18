@@ -1,12 +1,9 @@
-import GoogleFonts from 'next-google-fonts'
 import PropTypes from 'prop-types'
 import NextHead from 'next/head'
 
 const Head = ({ title, description, children }) => {
   return (
     <>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" />
-
       <NextHead>
         {/* Title */}
         <title>{title}</title>

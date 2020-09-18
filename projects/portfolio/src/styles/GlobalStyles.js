@@ -5,6 +5,20 @@ const GlobalStyles = () => {
   return (
     <Global
       styles={css`
+        @font-face {
+          font-family: 'Karla';
+          font-style: normal;
+          font-weight: 400;
+          src: url('/Karla-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+          font-family: 'Karla';
+          font-style: normal;
+          font-weight: 700;
+          src: url('/Karla-Bold.ttf') format('truetype');
+        }
+
         html,
         body,
         p,

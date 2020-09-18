@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   p {
     color: white;
     font-size: 2rem;
-    font-weight: 600;
     padding-bottom: 1.6rem;
   }
 
