@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 2rem;
 
   h3 {
@@ -15,7 +14,6 @@ export const Wrapper = styled.div`
 
     span {
       background: ${({ theme }) => theme.colors.messageBackground};
-      padding: 0 1rem;
     }
   }
 `
