@@ -14,6 +14,9 @@ export const Wrapper = styled.div`
 
     span {
       background: ${({ theme }) => theme.colors.messageBackground};
+      padding: 0.3rem 0.5rem;
+      line-height: 1.7;
+      white-space: break-spaces;
     }
   }
 `
