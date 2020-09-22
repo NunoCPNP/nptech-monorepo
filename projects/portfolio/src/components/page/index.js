@@ -11,7 +11,7 @@ import SideBar from '../side-bar'
 import ThemeSwitch from '../theme-switch'
 
 const Page = ({ header = true, footer = true, title, description, navbar, children }) => {
-  const { darkMode } = useControllersState()
+  const { darkMode, themeSelector } = useControllersState()
 
   return (
     <ThemeProvider theme={darkMode ? dark : light}>
@@ -25,7 +25,7 @@ const Page = ({ header = true, footer = true, title, description, navbar, childr
         {footer && <Footer />}
       </Wrapper>
       <SideBar navbar={navbar} />
-      <ThemeSwitch />
+      {themeSelector && <ThemeSwitch />}
     </ThemeProvider>
   )
 }
