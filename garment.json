@@ -9,6 +9,13 @@
             "appPath": "{{projectDir}}",
             "command": "dev"
           }
+        },
+        "build": {
+          "runner": "next",
+          "options": {
+            "appPath": "{{projectDir}}",
+            "command": "build"
+          }
         }
       }
     }
@@ -33,10 +40,6 @@
           }
         }
       }
-    },
-    "soon": {
-      "path": "projects/soon",
-      "extends": ["next-app"]
     }
   },
   "schematics": []

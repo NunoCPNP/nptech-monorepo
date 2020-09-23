@@ -1,9 +1,7 @@
 import styled from '@emotion/styled'
 
 export const Wrapper = styled('nav')`
-  position: fixed;
   z-index: 100;
-  top: 0;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.navbar};
   box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.3);

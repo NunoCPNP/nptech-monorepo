@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
+import { Container } from './styles'
 
 import Navbar from '../navbar'
 
 const Header = ({ navbar }) => (
-  <header data-testid="header">
+  <Container data-testid="header">
     <Navbar navbar={navbar} />
-  </header>
+  </Container>
 )
 
 Header.propTypes = {

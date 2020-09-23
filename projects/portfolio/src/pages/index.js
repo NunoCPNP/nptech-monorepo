@@ -1,33 +1,42 @@
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
 import logger from '@nptech/logger'
 import { useControllersState } from '../context/controllers'
 import { useEffect } from 'react'
 import { data } from '../dev-data/data'
 
+import { ThemeProvider } from 'emotion-theming'
+import { dark, light } from '../styles/themes'
+
 import { Alert } from '@nptech/components'
 
 import Page from '../components/page'
+import Header from '../components/header'
 import HomeSection from '../sections/home'
 import AboutSection from '../sections/about'
 import ProjectsSection from '../sections/projects'
 import ContactsSection from '../sections/contacts'
 
 const App = ({ navbar, cta, about, projects }) => {
-  const { alerts } = useControllersState()
+  const { darkMode, alerts } = useControllersState()
 
   useEffect(() => {
     logger('info', ' // --> repo welcome message ! ', true)
   }, [])
 
   return (
-    <Page navbar={navbar}>
-      <HomeSection cta={cta} />
-      <AboutSection about={about} />
-      <ProjectsSection projects={projects} />
-      <ContactsSection />
-      <Alert message={alerts.message} type={alerts.type} />
-    </Page>
+    <>
+      <ThemeProvider theme={darkMode ? dark : light}>
+        <div id="slots" style={{ height: '10rem' }} />
+        <Header navbar={navbar} />
+        <Page>
+          <HomeSection cta={cta} />
+          <AboutSection about={about} />
+          <ProjectsSection projects={projects} />
+          <ContactsSection />
+          <Alert message={alerts.message} type={alerts.type} />
+        </Page>
+      </ThemeProvider>
+    </>
   )
 }
 
