@@ -1,5 +1,5 @@
 import colors from './colors'
 
-export * from './Colors'
+export * from './colors'
 
 export { colors }
