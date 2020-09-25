@@ -1,14 +1,10 @@
 import styled from '@emotion/styled'
 
-import Page from '../components/page'
-
 const Blog = () => {
   return (
-    <Page>
-      <Wrapper>
-        <img src="toolbox.svg" alt="Coming soon" />
-      </Wrapper>
-    </Page>
+    <Wrapper>
+      <img src="toolbox.svg" alt="Coming soon" />
+    </Wrapper>
   )
 }
 

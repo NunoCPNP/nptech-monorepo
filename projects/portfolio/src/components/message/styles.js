@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
   h3 {
     color: ${({ theme }) => theme.colors.messageColor};
-    font-size: 3vw;
+    font-size: 3rem;
     font-weight: 700;
     display: block;
 
@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
   }
 
   h4 {
-    font-size: 1vw;
+    font-size: 1.5rem;
     color: white;
     text-transform: uppercase;
     padding-top: 2rem;

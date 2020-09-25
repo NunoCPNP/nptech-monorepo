@@ -14,6 +14,7 @@ export const dark = {
     anchorButtonBackground: `${colors.yellow}`,
     sectionTitle: `${colors.yellow}`,
     sectionTitleText: `${colors.white}`,
+    sectionTitleShadow: `${colors.darkGrey}`,
     sectionTitleUnderline: `${colors.yellow}`,
     formFont: `${colors.yellow}`,
     formLine: `${colors.lightGrey}`,

@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 
   .styled {
     position: relative;
-    text-shadow: 0px 2px 2px blue;
+    text-shadow: 0px 2px 2px ${({ theme }) => theme.colors.sectionTitleShadow};
     padding: 0 0.2rem;
     z-index: 1;
   }

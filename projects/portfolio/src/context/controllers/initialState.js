@@ -1,5 +1,5 @@
 export const initialState = {
-  themeSelector: false,
+  themeSelector: true,
   darkMode: true,
   sideBarOpen: false,
   alerts: {

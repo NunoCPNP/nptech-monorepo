@@ -4,10 +4,7 @@ import { Button } from './styles'
 const LinkButton = ({ label }) => {
   return (
     <Button>
-      <span className="circle" aria-hidden="true">
-        <span className="icon arrow"></span>
-      </span>
-      <span className="button-text">{label}</span>
+      <span>{label}</span>
     </Button>
   )
 }

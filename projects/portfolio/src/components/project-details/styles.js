@@ -10,13 +10,13 @@ export const Wrapper = styled.div`
     margin-bottom: 2rem;
 
     h2 {
-      font-size: 2.7vw;
+      font-size: 4rem;
       text-transform: uppercase;
       color: ${({ theme }) => theme.colors.projectTitle};
     }
 
     span {
-      font-size: 1vw;
+      font-size: 1.5rem;
       color: white;
       text-transform: uppercase;
       padding-left: 0.2rem;
@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
   }
 
   h3 {
-    font-size: 1vw;
+    font-size: 1.6rem;
     color: ${({ theme }) => theme.colors.projectText};
     margin-bottom: 1rem;
   }
@@ -34,18 +34,19 @@ export const Wrapper = styled.div`
     margin-top: 2rem;
 
     li {
-      font-size: 0.8vw;
+      font-size: 1.3rem;
       margin-right: 1rem;
+      font-weight: 700;
       color: ${({ theme }) => theme.colors.projectTechText};
       background-color: ${({ theme }) => theme.colors.projectTechBackground};
       border-radius: 0.8rem;
-      padding: 0.1rem 1rem;
+      padding: 0.3rem 1.2rem;
     }
   }
 
   .button-wrapper {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 2rem;
+    justify-content: flex-start;
+    margin-top: 4rem;
   }
 `
