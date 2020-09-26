@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { useControllersState } from '../context/controllers'
 import { useEffect } from 'react'
 import { data } from '../../dev-data/data'
-import { slot } from '../../dev-data/slot'
+import { useSlot } from '../hooks/useSlot'
 import { ThemeProvider } from 'emotion-theming'
 import { dark, light } from '../styles/themes'
 
@@ -21,23 +21,17 @@ import ContactsSection from '../sections/contacts'
 
 const App = ({ navbar, cta, about, projects }) => {
   const { darkMode, alerts, themeSelector } = useControllersState()
+  useSlot()
 
   useEffect(() => {
     logger('info', ' // --> repo welcome message ! ', true)
-  }, [])
-
-  useEffect(() => {
-    const div = document.getElementById('slots')
-    const response = slot()
-
-    div.innerHTML = response
   }, [])
 
   return (
     <>
       <SEO title="Nuno Pereira" description="Nuno Pereira - Front End Developer Portfolio 2020" />
       <ThemeProvider theme={darkMode ? dark : light}>
-        <div id="slots" />
+        <div id="slot" />
         <Header navbar={navbar} />
         <Wrapper>
           <HomeSection cta={cta} />
