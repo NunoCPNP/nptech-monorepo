@@ -21,7 +21,7 @@ const ProjectDetails = ({ project, setProject }) => {
             ))}
           </ul>
           <div className="button-wrapper" onClick={() => setProject(null)}>
-            <LinkButton label="Go Back" />
+            <LinkButton label="Back to Projects" icon="projects" />
           </div>
         </Wrapper>
       )}

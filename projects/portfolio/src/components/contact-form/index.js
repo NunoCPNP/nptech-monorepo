@@ -12,7 +12,7 @@ const ContactForm = () => {
     <form onSubmit={handleFormSubmit}>
       <StyledDiv>
         <label htmlFor="name">Name:</label>
-        <input autoComplete="off" id="name" type="test" placeholder="Your Name" />
+        <input autoComplete="off" id="name" type="text" placeholder="Your Name" />
       </StyledDiv>
       <StyledDiv>
         <label htmlFor="email">Email:</label>
@@ -27,7 +27,7 @@ const ContactForm = () => {
         <input autoComplete="off" id="message" type="text" placeholder="Your Message" />
       </StyledDiv>
       <ButtonContainer>
-        <LinkButton type="submit" aria-label="submit" label="Send Message" />
+        <LinkButton type="submit" aria-label="submit" label="Send Message" icon="email" />
       </ButtonContainer>
     </form>
   )

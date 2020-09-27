@@ -1,5 +1,8 @@
 export const initialState = {
-  themeSelector: true,
+  features: {
+    themeSelector: false,
+    slot: false,
+  },
   darkMode: true,
   sideBarOpen: false,
   alerts: {

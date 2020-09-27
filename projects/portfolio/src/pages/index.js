@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import logger from '@nptech/logger'
 import styled from '@emotion/styled'
-import { useControllersState } from '../context/controllers'
 import { useEffect } from 'react'
+import { useControllersState } from '../context/controllers'
 import { data } from '../../dev-data/data'
 import { useSlot } from '../hooks/useSlot'
 import { ThemeProvider } from 'emotion-theming'
@@ -20,8 +20,8 @@ import ProjectsSection from '../sections/projects'
 import ContactsSection from '../sections/contacts'
 
 const App = ({ navbar, cta, about, projects }) => {
-  const { darkMode, alerts, themeSelector } = useControllersState()
-  useSlot()
+  const { darkMode, alerts, features } = useControllersState()
+  const slot = useSlot()
 
   useEffect(() => {
     logger('info', ' // --> repo welcome message ! ', true)
@@ -31,10 +31,10 @@ const App = ({ navbar, cta, about, projects }) => {
     <>
       <SEO title="Nuno Pereira" description="Nuno Pereira - Front End Developer Portfolio 2020" />
       <ThemeProvider theme={darkMode ? dark : light}>
-        <div id="slot" />
+        {features.slot && <div id="slot" />}
         <Header navbar={navbar} />
         <Wrapper>
-          <HomeSection cta={cta} />
+          <HomeSection cta={cta} slot={slot} />
           <AboutSection about={about} />
           <ProjectsSection projects={projects} />
           <ContactsSection />
@@ -42,7 +42,7 @@ const App = ({ navbar, cta, about, projects }) => {
         </Wrapper>
         <Footer />
         <SideBar navbar={navbar} />
-        {themeSelector && <ThemeSwitch />}
+        {features.themeSelector && <ThemeSwitch />}
       </ThemeProvider>
     </>
   )

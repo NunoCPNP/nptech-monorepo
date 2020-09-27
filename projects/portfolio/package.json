@@ -40,6 +40,7 @@
   "devDependencies": {
     "@testing-library/react": "^10.4.8",
     "babel-jest": "^26.3.0",
+    "babel-plugin-inline-react-svg": "^1.1.1",
     "jest": "^26.4.0"
   }
 }

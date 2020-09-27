@@ -1,15 +1,18 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { slot } from '../../dev-data/slot'
 
 export const useSlot = () => {
+  const [contentLength, setContentLenght] = useState()
+
   useEffect(() => {
     const div = document.getElementById('slot')
 
-    if (process.env.NODE_ENV === 'development') {
+    if (div) {
       const content = slot()
       div.innerHTML = content
+      setContentLenght(div.innerText.length)
     }
   }, [])
 
-  return
+  return contentLength
 }

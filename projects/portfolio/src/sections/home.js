@@ -18,7 +18,8 @@ HomeSection.propTypes = {
 export default HomeSection
 
 const Section = styled.section`
-  padding-top: 5.5rem;
+  padding-top: ${({ slot }) => (slot !== 0 ? '0rem' : '5.5rem')};
+  padding-bottom: ${({ slot }) => (slot !== 0 ? '5.5rem' : '0rem')};
   min-height: 100vh;
   display: grid;
   align-content: center;
