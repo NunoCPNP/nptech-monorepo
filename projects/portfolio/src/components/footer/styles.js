@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 
 export const Wrapper = styled('footer')`
-  color: ${({ theme }) => theme.colors.footerColor};
-  background-color: ${({ theme }) => theme.colors.footerBackground};
+  color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.dark};
   text-align: center;
   text-transform: uppercase;
   padding: 2rem;

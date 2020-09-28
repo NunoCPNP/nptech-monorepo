@@ -3,10 +3,10 @@ import styled from '@emotion/styled'
 export const StyledAnchor = styled('a')`
   display: inline-block;
   text-decoration: none;
-  padding: 0.2rem 1rem;
-  color: ${({ theme }) => theme.colors.anchorButtonText};
+  padding: 0.4rem 1rem;
+  color: ${({ theme }) => theme.colors.dark};
   font-size: 1.2rem;
-  background-color: ${({ theme }) => theme.colors.anchorButtonBackground};
+  background-color: ${({ theme }) => theme.colors.highlight};
   border-radius: 1rem;
 `
 

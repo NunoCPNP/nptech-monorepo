@@ -29,14 +29,14 @@ export const CTAText = styled(motion.div)`
   grid-column: 6 / 13;
   align-self: center;
   text-align: right;
-  color: ${({ theme }) => theme.colors.ctaText};
+  color: ${({ theme }) => theme.colors.white};
   padding-right: 3rem;
 
   h2 {
     font-size: 2rem;
 
     span {
-      color: ${({ theme }) => theme.colors.ctaTextExtra};
+      color: ${({ theme }) => theme.colors.highlight};
       font-size: 7rem;
       font-weight: 700;
       padding-left: 1rem;

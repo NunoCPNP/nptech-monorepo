@@ -73,7 +73,7 @@ App.propTypes = {
 export default App
 
 const Wrapper = styled.main`
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.dark};
   transition: 0.3s ease background-color;
   overflow: hidden;
 `

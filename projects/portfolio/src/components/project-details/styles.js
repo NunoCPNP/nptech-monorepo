@@ -7,25 +7,26 @@ export const Wrapper = styled.div`
   justify-content: center;
 
   .name {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 
     h2 {
       font-size: 4rem;
       text-transform: uppercase;
-      color: ${({ theme }) => theme.colors.projectTitle};
+      color: ${({ theme }) => theme.colors.highlight};
+      font-weight: 700;
     }
 
     span {
-      font-size: 1.5rem;
-      color: white;
+      font-size: 1.4rem;
+      color: ${({ theme }) => theme.colors.highlight};
       text-transform: uppercase;
-      padding-left: 0.2rem;
+      padding: 0 0.2rem;
     }
   }
 
   h3 {
     font-size: 1.6rem;
-    color: ${({ theme }) => theme.colors.projectText};
+    color: ${({ theme }) => theme.colors.white};
     margin-bottom: 1rem;
   }
 
@@ -37,8 +38,8 @@ export const Wrapper = styled.div`
       font-size: 1.3rem;
       margin-right: 1rem;
       font-weight: 700;
-      color: ${({ theme }) => theme.colors.projectTechText};
-      background-color: ${({ theme }) => theme.colors.projectTechBackground};
+      color: ${({ theme }) => theme.colors.dark};
+      background-color: ${({ theme }) => theme.colors.highlight};
       border-radius: 0.8rem;
       padding: 0.3rem 1.2rem;
     }

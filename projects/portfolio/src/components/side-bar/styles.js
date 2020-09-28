@@ -8,7 +8,7 @@ export const Container = styled(motion.nav)`
   right: 0;
   width: 35rem;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.sideBar};
+  background-color: ${({ theme }) => theme.colors.black};
 
   .navbar-items {
     ul {
@@ -32,12 +32,12 @@ export const Container = styled(motion.nav)`
       text-transform: uppercase;
       font-size: 1.5rem;
       text-decoration: none;
-      color: ${({ theme }) => theme.colors.sideBarText};
+      color: ${({ theme }) => theme.colors.white};
     }
 
     .extra {
-      background-color: ${({ theme }) => theme.colors.extraBBackground};
-      color: ${({ theme }) => theme.colors.extraText};
+      background-color: ${({ theme }) => theme.colors.highlight};
+      color: ${({ theme }) => theme.colors.dark};
       border-radius: 1rem;
       padding: 0.1rem 1.3rem;
     }

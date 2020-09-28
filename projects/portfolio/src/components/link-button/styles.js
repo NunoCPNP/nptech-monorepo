@@ -9,27 +9,27 @@ export const Button = styled.button`
   font-size: 1.2rem;
   padding: 0.6rem 3.5rem;
   border: none;
-  border-top: 1px solid ${lightGrey};
-  border-bottom: 1px solid ${lightGrey};
+  border-top: 1px solid ${({ theme }) => theme.colors.light};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.light};
   font-weight: 700;
   background-color: transparent;
   text-decoration: none;
   transition: border 0.4s ease-out;
 
   &:hover {
-    border-top: 1px solid ${yellow};
-    border-bottom: 1px solid ${yellow};
+    border-top: 1px solid ${({ theme }) => theme.colors.highlight};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.highlight};
   }
 
   &:focus {
     outline: none;
-    border-top: 1px solid ${yellow};
-    border-bottom: 1px solid ${yellow};
+    border-top: 1px solid ${({ theme }) => theme.colors.highlight};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.highlight};
   }
 
   .svg {
     width: 12px;
-    fill: ${yellow};
+    fill: ${({ theme }) => theme.colors.highlight};
     margin-right: 0.8rem;
   }
 `

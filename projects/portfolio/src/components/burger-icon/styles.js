@@ -42,7 +42,7 @@ export const Burger = styled.div`
     content: '';
     width: 100%;
     border-radius: 0.25em;
-    background-color: white;
+    background-color: ${({ theme }) => theme.colors.white};
     height: 0.25em;
     position: absolute;
     transform: rotate(0);

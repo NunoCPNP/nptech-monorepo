@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 
   h2 {
     position: relative;
-    color: ${({ theme }) => theme.colors.sectionTitleText};
+    color: ${({ theme }) => theme.colors.white};
     font-size: 2.2rem;
     text-shadow: 0px 2px 2px black;
     letter-spacing: 1px;
@@ -26,13 +26,13 @@ export const Wrapper = styled.div`
     left: 0;
     height: 1.1rem;
     width: 100%;
-    background: ${({ theme }) => theme.colors.sectionTitle};
+    background: ${({ theme }) => theme.colors.highlight};
     z-index: 1;
     border-radius: 0.2rem;
   }
 
   h4 {
-    color: ${({ theme }) => theme.colors.sectionTitleText};
+    color: ${({ theme }) => theme.colors.white};
     font-size: 1.8rem;
     padding-top: 0.2rem;
     padding-left: 0.5rem;
