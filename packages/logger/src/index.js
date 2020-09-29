@@ -30,7 +30,7 @@ function logger(type, message, production) {
   } else if (type === 'error') {
     error(message, production)
   } else {
-    return console.error('Invalid type')
+    return console.error('Invalid type, please use "info", "warning" or "error"')
   }
 }
 
