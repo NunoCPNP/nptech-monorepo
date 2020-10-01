@@ -84,7 +84,7 @@ export const data = () => {
         id: uuidv4(),
         name: 'Farfetch',
         url: 'www.farfetch.com',
-        source: null,
+        source: '',
         image: '/cardBG.jpg',
         alt: 'Farfetch',
         description: [
