@@ -1,6 +1,6 @@
-const moongoose = require('moongoose')
+const mongoose = require('mongoose')
 
-const SettingsSchema = new moongoose.Schame({
+const SettingsSchema = new mongoose.Schema({
   active: {
     type: Boolean,
     required: true,
@@ -15,4 +15,4 @@ const SettingsSchema = new moongoose.Schame({
   },
 })
 
-module.exports = moongoose.model('Settings', SettingsSchema)
+module.exports = mongoose.model('Settings', SettingsSchema)
