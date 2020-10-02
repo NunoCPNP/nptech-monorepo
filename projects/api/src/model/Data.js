@@ -1,13 +1,5 @@
 const mongoose = require('mongoose')
 
-const DataSchema = new mongoose.Schema({
-  navbar: [navbarSchema],
-  cta: [String],
-  about: [aboutSchema],
-  technologies: [String],
-  projects: [projectsSchema],
-})
-
 const navbarSchema = new mongoose.Schema({
   label: {
     type: String,
@@ -23,7 +15,7 @@ const navbarSchema = new mongoose.Schema({
   },
 })
 
-const aboutSchema = new moongose.Schema({
+const aboutSchema = new mongoose.Schema({
   data: {
     type: String,
     required: true,
@@ -34,7 +26,7 @@ const aboutSchema = new moongose.Schema({
   },
 })
 
-const projectsSchema = new moongose.Schema({
+const projectsSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -57,6 +49,14 @@ const projectsSchema = new moongose.Schema({
   },
   description: [String],
   technologies: [String],
+})
+
+const DataSchema = new mongoose.Schema({
+  navbar: [navbarSchema],
+  cta: [String],
+  about: [aboutSchema],
+  technologies: [String],
+  projects: [projectsSchema],
 })
 
 module.exports = mongoose.model('Data', DataSchema)

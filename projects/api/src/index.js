@@ -25,9 +25,13 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const dataRoute = require('./routes/Data')
+const settingsRoute = require('./routes/Settings')
+const slotRoute = require('./routes/Slot')
 const notificationRoute = require('./routes/Notification')
 
 app.use('/api/v1/data', dataRoute)
+app.use('/api/v1/settings', settingsRoute)
+app.use('/api/v1/slot', slotRoute)
 app.use('/api/v1/notification', notificationRoute)
 
 const PORT = process.env.PORT || 5000
