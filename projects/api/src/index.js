@@ -3,6 +3,7 @@ const dotenv = require('dotenv')
 const express = require('express')
 const helmet = require('helmet')
 const morgan = require('morgan')
+const chalk = require('chalk')
 
 const connectDB = require('./config/mongodb')
 
@@ -36,4 +37,7 @@ app.use('/api/v1/notification', notificationRoute)
 
 const PORT = process.env.PORT || 5000
 
-app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
+app.listen(
+  PORT,
+  console.log(chalk.white.bgGreen.bold(' Server running ') + `${process.env.NODE_ENV} mode on port ${PORT}`),
+)
