@@ -4,11 +4,11 @@ import styled from '@emotion/styled'
 import { useEffect } from 'react'
 import { useControllersState } from '../context/controllers'
 import { data } from '../../dev-data/data'
+import { settings } from '../../dev-data/settings'
 import { useSlot } from '../hooks/useSlot'
 import { ThemeProvider } from 'emotion-theming'
 import { dark, light } from '../styles/themes'
 
-import { Alert } from '@nptech/components'
 import SEO from '../components/seo'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -18,20 +18,21 @@ import HomeSection from '../sections/home'
 import AboutSection from '../sections/about'
 import ProjectsSection from '../sections/projects'
 import ContactsSection from '../sections/contacts'
+import { Alert } from '@nptech/components'
 
-const App = ({ navbar, cta, about, projects }) => {
-  const { darkMode, alerts, features } = useControllersState()
+const App = ({ navbar, cta, about, projects, settings }) => {
+  const { darkMode, alerts } = useControllersState()
   const slot = useSlot()
 
   useEffect(() => {
-    logger('info', ' // --> repo welcome message ! ', true)
+    logger('info', 'Looking at code? You can find it at www.github.com/nunocpnp', true)
   }, [])
 
   return (
     <>
       <SEO title="Nuno Pereira" description="Nuno Pereira - Front End Developer Portfolio 2020" />
       <ThemeProvider theme={darkMode ? dark : light}>
-        {features.slot && <div id="slot" />}
+        {settings.slot && <div id="slot" />}
         <Header navbar={navbar} />
         <Wrapper>
           <HomeSection cta={cta} slot={slot} />
@@ -42,22 +43,24 @@ const App = ({ navbar, cta, about, projects }) => {
         </Wrapper>
         <Footer />
         <SideBar navbar={navbar} />
-        {features.themeSelector && <ThemeSwitch />}
+        {settings.themeSelector && <ThemeSwitch />}
       </ThemeProvider>
     </>
   )
 }
 
 export async function getStaticProps() {
-  const result = data()
+  const dataResponse = data()
+  const settingsResponse = settings()
 
   return {
     props: {
-      navbar: result.navbar,
-      cta: result.cta,
-      about: result.about,
-      technologies: result.technologies,
-      projects: result.projects,
+      navbar: dataResponse.navbar,
+      cta: dataResponse.cta,
+      about: dataResponse.about,
+      technologies: dataResponse.technologies,
+      projects: dataResponse.projects,
+      settings: settingsResponse.settings,
     },
   }
 }
@@ -68,6 +71,7 @@ App.propTypes = {
   about: PropTypes.arrayOf(PropTypes.array).isRequired,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
   projects: PropTypes.arrayOf(PropTypes.object).isRequired,
+  settings: PropTypes.object.isRequired,
 }
 
 export default App

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const chalk = require('chalk')
 
 const connectDB = async () => {
   try {
@@ -8,7 +9,7 @@ const connectDB = async () => {
       useFindAndModify: false,
     })
 
-    console.log(`MongoDB Connected: ${connect.connection.host}`)
+    console.log(chalk.white.bgYellow.bold(' MongoDB Connected ') + ` ${connect.connection.host}`)
   } catch (error) {
     console.error(error)
     process.exit(1)
