@@ -1,11 +1,17 @@
 */** @nunocpnp
 
-apps/**
+projects/**
 packages/**
-components/**
+shared/**
 
-apps/pf-app/**
-apps/pf-api/**
+projects/api/**
+projects/portfolio/**
+projects/portfolio-mobile/**
+projects/slots/**
+projects/soon/**
 
-packages/configs/**
 packages/logger/**
+
+shared/components/**
+shared/configs/**
+shared/styles/**
