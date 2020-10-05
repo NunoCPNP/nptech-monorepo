@@ -44,6 +44,10 @@ export const Wrapper = styled('nav')`
       border-radius: 1rem;
       padding: 0.1rem 1.3rem;
       font-weight: 700;
+
+      :hover {
+        color: ${({ theme }) => theme.colors.dark};
+      }
     }
 
     @media only screen and (max-width: 768px) {

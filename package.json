@@ -11,6 +11,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
+    "libraries/*",
     "packages/*",
     "projects/*",
     "shared/*"
@@ -22,8 +23,7 @@
   },
   "lint-staged": {
     "{**/*.js, !/*.js}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "devDependencies": {
