@@ -1,9 +1,18 @@
 import styled from '@emotion/styled'
 
 export const CardWrapper = styled.div`
-  img {
+  position: relative;
+
+  overflow: hidden;
+  border-radius: 1rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
     width: 100%;
     height: 100%;
-    border-radius: 0.8rem;
+    background: ${({ theme }) => theme.colors.highlight};
+    transform: skewY(345deg);
   }
 `
