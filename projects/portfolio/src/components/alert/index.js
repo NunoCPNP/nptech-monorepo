@@ -3,7 +3,7 @@ import { Wrapper } from './styles'
 import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
-export const Alert = ({ message }) => {
+const Alert = ({ message }) => {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -31,3 +31,5 @@ export const Alert = ({ message }) => {
 Alert.propTypes = {
   message: PropTypes.string,
 }
+
+export default Alert
