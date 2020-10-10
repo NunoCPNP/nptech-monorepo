@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
 import { useInView } from 'react-intersection-observer'
-import { motion, useAnimation } from 'framer-motion'
+import { useAnimation } from 'framer-motion'
+import { Container, Wrapper } from './styles'
 
 import SectionTitle from '../components/section-title'
 import OneColumnGrid from '../components/one-column-grid'
@@ -10,7 +10,7 @@ import Message from '../components/message'
 const ContactsSection = () => {
   const controls = useAnimation()
   const [ref, inView] = useInView({
-    rootMargin: '100px',
+    rootMargin: '-100px',
     triggerOnce: true,
   })
 
@@ -21,10 +21,10 @@ const ContactsSection = () => {
   }, [controls, inView])
 
   const sectionAnimation = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { opacity: 0, x: 200 },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
         delay: 0.5,
       },
@@ -32,7 +32,7 @@ const ContactsSection = () => {
   }
 
   return (
-    <section id="Contacts">
+    <Container id="Contacts">
       <Wrapper ref={ref} animate={controls} initial="hidden" variants={sectionAnimation}>
         <SectionTitle title="Contacts" subTitle="Have a question or want to work together ?" uppercase />
         <OneColumnGrid items={2} breakTo={1} gap={4} maxWidth={140} padding={4} top={4}>
@@ -40,13 +40,8 @@ const ContactsSection = () => {
           <Message />
         </OneColumnGrid>
       </Wrapper>
-    </section>
+    </Container>
   )
 }
 
 export default ContactsSection
-
-const Wrapper = styled(motion.div)`
-  padding-top: 5.5rem;
-  overflow-x: hidden;
-`

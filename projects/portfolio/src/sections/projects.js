@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
 import { useState } from 'react'
 import { motion, AnimatePresence, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { Container, Wrapper } from './styles'
 
 import SectionTitle from '../components/section-title'
 import OneColumnGrid from '../components/one-column-grid'
@@ -37,7 +37,7 @@ const ProjectsSection = ({ projects }) => {
   }
 
   return (
-    <section id="Projects">
+    <Container id="Projects">
       <Wrapper ref={ref} animate={controls} initial="hidden" variants={sectionAnimation}>
         <SectionTitle
           uppercase
@@ -63,7 +63,7 @@ const ProjectsSection = ({ projects }) => {
           </AnimatePresence>
         )}
       </Wrapper>
-    </section>
+    </Container>
   )
 }
 
@@ -72,8 +72,3 @@ ProjectsSection.propTypes = {
 }
 
 export default ProjectsSection
-
-const Wrapper = styled(motion.div)`
-  padding-top: 5.5rem;
-  overflow-x: hidden;
-`

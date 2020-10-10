@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
 import { useInView } from 'react-intersection-observer'
-import { motion, useAnimation } from 'framer-motion'
+import { useAnimation } from 'framer-motion'
+import { Container, Wrapper } from './styles'
 
 import SectionTitle from '../components/section-title'
 import OneColumnGrid from '../components/one-column-grid'
@@ -32,14 +32,14 @@ const AboutSection = ({ about }) => {
   }
 
   return (
-    <section id="About">
+    <Container id="About">
       <Wrapper ref={ref} animate={controls} initial="hidden" variants={sectionAnimation}>
         <SectionTitle uppercase title="About" />
         <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
           <About about={about} />
         </OneColumnGrid>
       </Wrapper>
-    </section>
+    </Container>
   )
 }
 
@@ -48,8 +48,3 @@ AboutSection.propTypes = {
 }
 
 export default AboutSection
-
-const Wrapper = styled(motion.div)`
-  padding-top: 5.5rem;
-  overflow-x: hidden;
-`
