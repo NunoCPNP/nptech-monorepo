@@ -9,6 +9,7 @@ import { useSlot } from '../hooks/useSlot'
 import { ThemeProvider } from 'emotion-theming'
 import { dark, light } from '../styles/themes'
 
+import Alert from '../components/alert'
 import SEO from '../components/seo'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -18,7 +19,6 @@ import HomeSection from '../sections/home'
 import AboutSection from '../sections/about'
 import ProjectsSection from '../sections/projects'
 import ContactsSection from '../sections/contacts'
-import { Alert } from '@nptech/components'
 
 const App = ({ navbar, cta, about, projects, settings }) => {
   const { darkMode, alerts } = useControllersState()
