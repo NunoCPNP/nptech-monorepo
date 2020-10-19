@@ -18,8 +18,14 @@ export const Wrapper = styled.div`
       grid-column: 1 / 11;
     }
 
-    @media only screen and (max-width: 688px) {
+    @media only screen and (max-width: 768px) {
       grid-column: 1 / 12;
+      grid-row: 1 / 11;
+    }
+
+    @media only screen and (max-width: 688px) {
+      grid-column: 1 / 13;
+      grid-row: 1 / 10;
     }
   }
 `
@@ -51,8 +57,13 @@ export const CTAText = styled(motion.div)`
     }
   }
 
+  @media only screen and (max-width: 992px) {
+    grid-row: 8 / 13;
+    grid-column: 3 / 13;
+  }
+
   @media only screen and (max-width: 768px) {
-    grid-column: 4 / 13;
+    grid-row: 9 / 13;
 
     h2 {
       font-size: 1.5rem;
@@ -63,6 +74,28 @@ export const CTAText = styled(motion.div)`
 
       span {
         font-size: 2rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 688px) {
+    grid-column: 1 / 13;
+    text-align: center;
+    padding: 0;
+
+    h2 {
+      font-size: 1.5rem;
+
+      span {
+        font-size: 5.5rem;
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+
+      span {
+        font-size: 1.5rem;
       }
     }
   }
