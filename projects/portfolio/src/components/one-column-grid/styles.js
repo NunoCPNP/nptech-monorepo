@@ -9,7 +9,7 @@ export const Container = styled.div`
   padding: ${(props) => props.padding}rem;
   margin-top: ${(props) => props.top}rem;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: repeat(${(props) => props.breakTo}, 1fr);
   }
 `

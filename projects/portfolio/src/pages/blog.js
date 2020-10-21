@@ -4,7 +4,7 @@ import { dark, light } from '../styles/themes'
 import { useControllersState } from '../context/controllers'
 
 import SEO from '../components/seo'
-import { Alert } from '@nptech/components'
+import Alert from '../components/alert'
 
 const Blog = () => {
   const { darkMode, alerts } = useControllersState()

@@ -27,4 +27,8 @@ export const Wrapper = styled.div`
     text-transform: uppercase;
     padding-top: 2rem;
   }
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
 `

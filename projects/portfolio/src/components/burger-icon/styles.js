@@ -93,7 +93,7 @@ export const Burger = styled.div`
     transform: rotate(45deg);
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 769px) {
     display: none;
   }
 `

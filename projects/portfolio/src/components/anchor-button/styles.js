@@ -3,9 +3,10 @@ import styled from '@emotion/styled'
 export const StyledAnchor = styled('a')`
   display: inline-block;
   text-decoration: none;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 1.5rem;
   color: ${({ theme }) => theme.colors.dark};
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
   background-color: ${({ theme }) => theme.colors.highlight};
   border-radius: 1rem;
 `
