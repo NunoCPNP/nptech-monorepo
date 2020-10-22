@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "libraries/*",
+    "ui/*",
     "packages/*",
     "projects/*",
     "shared/*"
