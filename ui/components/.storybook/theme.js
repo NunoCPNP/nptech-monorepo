@@ -3,18 +3,18 @@ import { create } from '@storybook/theming/create';
 export default create({
   base: 'dark',
 
-  colorSecondary: '#7159c1',
+  colorSecondary: '#f9bf3b',
 
-  appBg: '#0b0a0d',
-  appContentBg: '#16161A',
-  appBorderColor: '#7159c1',
+  appBg: '#2c2f33',
+  appContentBg: '#2c2f33',
+  appBorderColor: '#f9bf3b',
 
-  textColor: '#fff',
+  textColor: '#fefffc',
 
-  barTextColor: '#E6E6E6',
+  barTextColor: '#fefffc',
   barSelectedColor: '#ffffff',
-  barBg: '#1b1a1f',
+  barBg: '#505050',
 
-  brandTitle: 'Rocketseat',
-  brandUrl: 'https://rocketseat.com.br/',
+  brandTitle: 'Nptech - UI Component Library',
+  brandUrl: 'https://www.nunopereira.tech/',
 });
