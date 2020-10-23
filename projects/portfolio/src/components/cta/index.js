@@ -9,7 +9,7 @@ const imageAnimation = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 1.5,
+      delay: 1,
     },
   },
 }
@@ -19,7 +19,7 @@ const textAnimation = {
   visible: {
     x: 0,
     transition: {
-      delay: 2,
+      delay: 1.5,
     },
   },
 }

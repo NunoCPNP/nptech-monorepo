@@ -11,14 +11,13 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: 0.3,
-      when: 'beforeChildren',
       staggerChildren: 0.1,
+      delayChildren: 0.2,
     },
   },
 }
 
-const containerItems = {
+const item = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
@@ -33,22 +32,18 @@ const Navbar = ({ navbar }) => {
         <div className="navbar-logo">
           <div></div>
         </div>
-        {navbar && (
-          <>
-            <div className="navbar-items">
-              <motion.ul variants={container} initial="hidden" animate="visible">
-                {navbar.map((item) => (
-                  <motion.li key={item.id} variants={containerItems}>
-                    <Link href={item.link}>
-                      {item.type === 'standard' ? <a>{item.label}</a> : <a className="extra">{item.label}</a>}
-                    </Link>
-                  </motion.li>
-                ))}
-              </motion.ul>
-            </div>
-            <BurgerIcon />
-          </>
-        )}
+        <div className="navbar-items">
+          <motion.ul variants={container} initial="hidden" animate={navbar.length > 0 && 'visible'}>
+            {navbar.map((link) => (
+              <motion.li key={link.id} variants={item}>
+                <Link href={link.link}>
+                  {link.type === 'standard' ? <a>{link.label}</a> : <a className="extra">{link.label}</a>}
+                </Link>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </div>
+        <BurgerIcon />
       </div>
     </Wrapper>
   )
