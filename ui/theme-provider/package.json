@@ -1,0 +1,14 @@
+{
+  "name": "@nptech/theme-provider",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "author": "Nuno Pereira",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "dependencies": {
+    "emotion-theming": "^10.0.27"
+  }
+}

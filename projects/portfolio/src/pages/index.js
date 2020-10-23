@@ -6,8 +6,7 @@ import { useControllersState } from '../context/controllers'
 import { data } from '../../dev-data/data'
 import { settings } from '../../dev-data/settings'
 import { useSlot } from '../hooks/useSlot'
-import { ThemeProvider } from 'emotion-theming'
-import { dark, light } from '../styles/themes'
+import { Provider } from '@nptech/theme-provider'
 
 import Alert from '../components/alert'
 import SEO from '../components/seo'
@@ -31,7 +30,7 @@ const App = ({ navbar, cta, about, projects, settings }) => {
   return (
     <>
       <SEO title="Nuno Pereira" description="Nuno Pereira - Front End Developer Portfolio 2020" />
-      <ThemeProvider theme={darkMode ? dark : light}>
+      <Provider darkMode={darkMode}>
         {settings.slot && <div id="slot" />}
         <Header navbar={navbar} />
         <Wrapper>
@@ -44,7 +43,7 @@ const App = ({ navbar, cta, about, projects, settings }) => {
         <Footer />
         <SideBar navbar={navbar} />
         {settings.themeSelector && <ThemeSwitch />}
-      </ThemeProvider>
+      </Provider>
     </>
   )
 }
