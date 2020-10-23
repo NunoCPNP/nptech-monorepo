@@ -3,32 +3,19 @@ import React from "react"
 import { Container } from './styles';
 
 export interface Props {
-  /**
-   * Background Color
-   */
   backgroundColor?: string;
-  /**
-   * Text Color
-   */
   color?: string;
-  /**
-   * Outline Color
-   */
+  outlinedColor?: string;
   outlined?: boolean;
-  /**
-   * OnClick Function
-   */
   onClick?: () => void;
-  /**
-   * Button disable
-   */
   disabled?: boolean;
 }
 
-const ButtonWrapper: React.FC<Props> = ({
+export const Button: React.FC<Props> = ({
   children,
-  backgroundColor = '#7159c1',
-  color = '#fff',
+  backgroundColor = '#f9bf3b',
+  color = '#2c2f33',
+  outlinedColor = '#fefffc',
   outlined = false,
   ...props
 }) => {
@@ -37,11 +24,10 @@ const ButtonWrapper: React.FC<Props> = ({
       backgroundColor={backgroundColor}
       color={color}
       outlined={outlined}
+      outlinedColor={outlinedColor}
       {...props}
     >
       {children}
     </Container>
   );
 };
-
-export { ButtonWrapper as Button };

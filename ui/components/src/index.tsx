@@ -1,1 +1,6 @@
-export { Button } from './Components/Button'
+export { Button } from './components/Button'
+export { Modal } from './components/Modal'
+export { Radio } from './components/Radio'
+export { Input } from './components/Input'
+export { CheckBox } from './components/CheckBox'
+export { Separator } from './components/Separator'

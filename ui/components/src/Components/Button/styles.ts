@@ -4,7 +4,7 @@ import { Props } from './index';
 
 export const Container = styled.button<Props>`
   background-color: ${(props) => props.outlined ? 'transparent' : props.backgroundColor};
-  color: ${({ color }: Props) => color};
+  color: ${(props) => props.outlined ? props.outlinedColor : props.color};
   padding: 18px 45px;
   text-transform: uppercase;
   font-weight: bold;
