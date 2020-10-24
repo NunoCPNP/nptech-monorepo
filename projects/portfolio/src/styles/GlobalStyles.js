@@ -1,5 +1,12 @@
 import { Global, css } from '@emotion/core'
-import { colors } from '@nptech/styles'
+
+const colors = {
+  yellow: '#f9bf3b',
+  white: '#fefffc',
+  darkGrey: '#2c2f33',
+  lightGrey: '#505050',
+  black: '#26262c',
+}
 
 const GlobalStyles = () => {
   return (

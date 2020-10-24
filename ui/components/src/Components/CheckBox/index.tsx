@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { forwardRef } from 'react';
 
 import { Label, Box, Mark } from './styles';
@@ -22,8 +21,8 @@ export interface IBox {
   ref: any;
 }
 
-export const CheckBox = forwardRef(
-  ({ label, name, value, color = '#f9bf3b', ...props }: Props, ref) => {
+export const CheckBox = forwardRef<HTMLInputElement, Props>(
+  ({ label, name, value, color = '#f9bf3b', ...props }, ref) => {
     const { readOnly, onChange } = props;
 
     return (

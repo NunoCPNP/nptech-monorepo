@@ -1,10 +1,9 @@
 import styled from '@emotion/styled'
-import { yellow, lightGrey } from '@nptech/styles'
 
 export const Button = styled.button`
   display: flex;
   align-items: center;
-  color: ${yellow};
+  color: ${({ theme }) => theme.colors.highlight};
   text-transform: uppercase;
   font-size: 1.2rem;
   padding: 0.6rem 3.5rem;

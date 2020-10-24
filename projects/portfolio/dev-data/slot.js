@@ -1,4 +1,10 @@
-import { yellow, black } from '@nptech/styles'
+const colors = {
+  yellow: '#f9bf3b',
+  white: '#fefffc',
+  darkGrey: '#2c2f33',
+  lightGrey: '#505050',
+  black: '#26262c',
+}
 
 export const slot = () => {
   return `
@@ -6,12 +12,12 @@ export const slot = () => {
         .wrapper {
           display: flex;
           justify-content: center;
-          background-color: ${yellow};
+          background-color: ${colors.yellow};
           padding: 1rem;
         }
         .text {
           text-transform: uppercase;
-          color: ${black};
+          color: ${colors.black};
           font-size: 1.3rem;
           font-weight: 700;
         }

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { forwardRef } from 'react';
 
 import { Label, Radio, Mark } from './styles';
@@ -14,8 +13,8 @@ export interface Props {
   onChange?: () => void;
 }
 
-const RadioWrapper = forwardRef(
-  ({ label, name, value, color = '#f9bf3b', ...props }: Props, ref) => {
+const RadioWrapper = forwardRef<HTMLImageElement, Props>(
+  ({ label, name, value, color = '#f9bf3b', ...props }, ref) => {
     const { readOnly, onChange } = props;
 
     return (

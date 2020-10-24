@@ -13,7 +13,6 @@
   "workspaces": [
     "packages/*",
     "projects/*",
-    "shared/*",
     "ui/*"
   ],
   "scripts": {
