@@ -36,9 +36,39 @@
           "input": "{{projectDir}}/src/**/*.js",
           "output": "{{projectDir}}/src",
           "options": {
-            "configFile": ".eslintrc.js"
+            "configFile": ".eslintrc.js",
+            "stream": true
           }
         }
+      }
+    },
+    "components": {
+      "path": "ui/components",
+      "tasks": {
+        "storybook": {
+          "runner": "bin",
+          "options": {
+            "bin": "yarn",
+            "args": "run storybook",
+            "stream": true,
+            "longRunning": true
+          }
+        },
+        "clean": {
+          "runner": "clean",
+          "input": "{{projectDir}}/dist"
+        },
+        "build": [
+          ":clean",
+          {
+            "runner": "bin",
+            "options": {
+              "bin": "yarn",
+              "args": "run build",
+              "stream": true
+            }
+          }
+        ]
       }
     }
   },

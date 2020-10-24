@@ -30,6 +30,7 @@
     "@commitlint/cli": "^9.1.1",
     "@garment/cli": "^0.13.10",
     "@garment/plugin-runner-babel": "^0.13.13",
+    "@garment/plugin-runner-bin": "^0.13.13",
     "@garment/plugin-runner-clean": "^0.13.13",
     "@garment/plugin-runner-eslint": "^0.13.10",
     "@garment/plugin-runner-jest": "^0.13.10",
