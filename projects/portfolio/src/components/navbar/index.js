@@ -33,14 +33,15 @@ const Navbar = ({ navbar }) => {
           <div></div>
         </div>
         <div className="navbar-items">
-          <motion.ul variants={container} initial="hidden" animate={navbar.length > 0 && 'visible'}>
-            {navbar.map((link) => (
-              <motion.li key={link.id} variants={item}>
-                <Link href={link.link}>
-                  {link.type === 'standard' ? <a>{link.label}</a> : <a className="extra">{link.label}</a>}
-                </Link>
-              </motion.li>
-            ))}
+          <motion.ul variants={container} initial="hidden" animate={'visible'}>
+            {navbar &&
+              navbar.map((link) => (
+                <motion.li key={link.id} variants={item}>
+                  <Link href={link.link}>
+                    {link.type === 'standard' ? <a>{link.label}</a> : <a className="extra">{link.label}</a>}
+                  </Link>
+                </motion.li>
+              ))}
           </motion.ul>
         </div>
         <BurgerIcon />

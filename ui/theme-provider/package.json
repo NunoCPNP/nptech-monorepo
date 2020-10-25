@@ -5,6 +5,7 @@
   "author": "Nuno Pereira",
   "license": "MIT",
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "tsc -p ."
   },
   "devDependencies": {

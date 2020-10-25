@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 8080",
+    "prebuild": "rimraf dist",
     "build": "tsc -p ."
   },
   "devDependencies": {

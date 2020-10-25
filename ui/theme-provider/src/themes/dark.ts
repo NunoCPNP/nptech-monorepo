@@ -1,17 +1,25 @@
-const colors = {
-  yellow: '#f9bf3b',
-  white: '#fefffc',
-  darkGrey: '#2c2f33',
-  lightGrey: '#505050',
-  black: '#26262c',
+const yellow = '#f9bf3b'
+const white = '#fefffc'
+const darkGrey = '#2c2f33'
+const lightGrey= '#505050'
+const black= '#26262c'
+
+interface IDark {
+  colors: {
+    dark: string,
+    light: string,
+    highlight: string,
+    white: string,
+    black: string
+  }
 }
 
-export const dark = {
+export const dark: IDark = {
   colors: {
-    dark: `${colors.darkGrey}`,
-    light: `${colors.lightGrey}`,
-    highlight: `${colors.yellow}`,
-    white: `${colors.white}`,
-    black: `${colors.black}`,
+    dark: `${darkGrey}`,
+    light: `${lightGrey}`,
+    highlight: `${yellow}`,
+    white: `${white}`,
+    black: `${black}`,
   },
 }

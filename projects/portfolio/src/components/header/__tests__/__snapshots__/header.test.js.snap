@@ -3,10 +3,11 @@
 exports[`<Header /> spec Should match snapshot 1`] = `
 <DocumentFragment>
   <header
+    class="css-ace7ko"
     data-testid="header"
   >
     <nav
-      class="css-15gg7lv"
+      class="css-1is2evw"
       data-testid="navbar"
     >
       <div
@@ -16,6 +17,25 @@ exports[`<Header /> spec Should match snapshot 1`] = `
           class="navbar-logo"
         >
           <div />
+        </div>
+        <div
+          class="navbar-items"
+        >
+          <ul
+            style="opacity: 1; transform: scale(0) translateZ(0);"
+          />
+        </div>
+        <div
+          class="css-lwee4w"
+        >
+          <div
+            class="burger burger-squeeze"
+            role="navigation"
+          >
+            <div
+              class="burger-lines"
+            />
+          </div>
         </div>
       </div>
     </nav>

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import { dark, light } from '../styles/themes'
 import { useControllersState } from '../context/controllers'
@@ -8,6 +9,16 @@ import Alert from '../components/alert'
 
 const Blog = () => {
   const { darkMode, alerts } = useControllersState()
+
+  useEffect(() => {
+    async function article() {
+      fetch('https://dev.to/api/articles/319913')
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+    }
+
+    article()
+  }, [])
 
   return (
     <>

@@ -16,7 +16,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --verbose",
+    "test": "jest",
     "test:watch": "jest --verbose --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint src --ext .js,.jsx",
