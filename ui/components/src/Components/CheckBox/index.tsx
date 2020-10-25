@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import { Label, Box, Mark } from './styles';
 
-export interface Props {
+interface Props {
   label: string;
   name: string;
   value: any;

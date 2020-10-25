@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 import { Label, Radio, Mark } from './styles';
 
-export interface Props {
+interface Props {
   label: string;
   name: string;
   value: any;
@@ -13,7 +13,11 @@ export interface Props {
   onChange?: () => void;
 }
 
-const RadioWrapper = forwardRef<HTMLImageElement, Props>(
+export interface ILabel {
+  color?: string
+}
+
+const RadioWrapper = forwardRef<HTMLInputElement, Props>(
   ({ label, name, value, color = '#f9bf3b', ...props }, ref) => {
     const { readOnly, onChange } = props;
 

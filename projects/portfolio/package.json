@@ -13,6 +13,9 @@
     }
   ],
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "test": "jest --verbose",
     "test:watch": "jest --verbose --watch",
     "test:coverage": "jest --coverage",

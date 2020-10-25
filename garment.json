@@ -1,30 +1,47 @@
 {
   "$schema": "./node_modules/@garment/workspace/schemas/config.schema.json",
   "presets": {
-    "next-app": {
+    "ui-package": {
       "tasks": {
-        "start": {
-          "runner": "next",
-          "options": {
-            "appPath": "{{projectDir}}",
-            "command": "dev"
-          }
+        "clean": {
+          "runner": "clean",
+          "input": "{{projectDir}}/dist"
         },
-        "build": {
-          "runner": "next",
-          "options": {
-            "appPath": "{{projectDir}}",
-            "command": "build"
+        "build": [
+          ":clean",
+          {
+            "runner": "bin",
+            "options": {
+              "bin": "yarn",
+              "args": "run build",
+              "stream": true
+            }
           }
-        }
+        ]
       }
     }
   },
   "projects": {
     "portfolio": {
       "path": "projects/portfolio",
-      "extends": ["next-app"],
       "tasks": {
+        "start": [
+          "ui-package:build",
+          {
+            "runner": "next",
+            "options": {
+              "appPath": "{{projectDir}}",
+              "command": "dev"
+            }
+          }
+        ],
+        "build": {
+          "runner": "next",
+          "options": {
+            "appPath": "{{projectDir}}",
+            "command": "build"
+          }
+        },
         "test": {
           "runner": "jest",
           "options": {
@@ -44,6 +61,7 @@
     },
     "components": {
       "path": "ui/components",
+      "extends": ["ui-package"],
       "tasks": {
         "storybook": {
           "runner": "bin",
@@ -53,23 +71,13 @@
             "stream": true,
             "longRunning": true
           }
-        },
-        "clean": {
-          "runner": "clean",
-          "input": "{{projectDir}}/dist"
-        },
-        "build": [
-          ":clean",
-          {
-            "runner": "bin",
-            "options": {
-              "bin": "yarn",
-              "args": "run build",
-              "stream": true
-            }
-          }
-        ]
+        }
       }
+    },
+    "theme-provider": {
+      "path": "ui/theme-provider",
+      "extends": ["ui-package"],
+      "tasks": {}
     }
   },
   "schematics": []

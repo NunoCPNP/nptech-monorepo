@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import { Props } from './index';
+import { ILabel } from './index';
 
 export const Label = styled.label`
   display: flex;
@@ -16,7 +16,7 @@ export const Label = styled.label`
 
   &:hover span,
   input:checked ~ span {
-    background-color: ${(props: Props) => props.color};
+    background-color: ${(props: ILabel) => props.color};
   }
 `;
 

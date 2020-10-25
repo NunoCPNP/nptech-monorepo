@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Label } from './styles';
 
-export interface Props {
+interface Props {
   name: string;
   value: string;
   setValue: (text: string) => void;
