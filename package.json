@@ -18,7 +18,9 @@
   "scripts": {
     "preinstall": "node checkYarn.js",
     "version": "lerna version --conventional-commits --yes",
-    "version:minor": "lerna version minor --conventional-commits --yes"
+    "build:ui": "lerna run build --parallel --scope @nptech/theme-provider --scope @nptech/components",
+    "storybook": "lerna run storybook --scope @nptech/components",
+    "portfolio": "lerna run dev --scope @nptech/portfolio --stream"
   },
   "lint-staged": {
     "{**/*.js, !/*.js}": [
