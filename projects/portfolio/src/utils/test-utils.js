@@ -1,15 +1,14 @@
 import { render } from '@testing-library/react'
 
-import { ThemeProvider } from 'emotion-theming'
-import { dark } from '../styles/themes'
 import { ControllersProvider } from '../context/controllers'
+import { Provider } from '@nptech/theme-provider'
 
 // eslint-disable-next-line react/prop-types
 const AllTheProviders = ({ children }) => {
   return (
-    <ThemeProvider theme={dark}>
+    <Provider darkmode={true}>
       <ControllersProvider>{children}</ControllersProvider>
-    </ThemeProvider>
+    </Provider>
   )
 }
 

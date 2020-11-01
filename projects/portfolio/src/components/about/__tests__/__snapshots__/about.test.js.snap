@@ -3,7 +3,7 @@
 exports[`<About /> spec Should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-1ur40l5"
+    class="css-pt35d5"
     data-testid="about-component"
   >
     <div />

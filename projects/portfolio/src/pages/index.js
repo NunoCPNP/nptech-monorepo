@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 import logger from '@nptech/logger'
-import styled from '@emotion/styled'
+import styled from '@nptech/theme-provider'
+import { Provider } from '@nptech/theme-provider'
 import { useEffect } from 'react'
 import { useControllersState } from '../context/controllers'
+
 import { data } from '../../dev-data/data'
 import { settings } from '../../dev-data/settings'
 import { useSlot } from '../hooks/useSlot'
@@ -18,8 +20,6 @@ import HomeSection from '../sections/home'
 import AboutSection from '../sections/about'
 import ProjectsSection from '../sections/projects'
 import ContactsSection from '../sections/contacts'
-
-import { Provider } from '@nptech/theme-provider'
 
 const App = ({ navbar, cta, about, projects, settings }) => {
   const { darkMode, alerts } = useControllersState()

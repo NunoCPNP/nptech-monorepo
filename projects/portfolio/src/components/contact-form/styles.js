@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@nptech/theme-provider'
 
 export const StyledDiv = styled.div`
   padding: 1rem 0;

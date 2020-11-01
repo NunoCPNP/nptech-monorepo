@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
+import styled from '@nptech/theme-provider'
 
-export const Wrapper = styled('nav')`
+export const Wrapper = styled.nav`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.light};
   box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.3);
@@ -54,4 +54,8 @@ export const Wrapper = styled('nav')`
       display: none;
     }
   }
+`
+
+export const Logo = styled.div`
+  width: 4rem;
 `

@@ -1,19 +1,19 @@
 import { useControllers } from '../../context/controllers'
-import { Burger } from './styles'
+
+import { Icon } from './styles'
 
 const BurgerIcon = () => {
   const [state, dispatch] = useControllers()
 
   return (
-    <Burger>
-      <div
-        role="navigation"
-        onClick={() => dispatch({ type: 'TOGGLE_SIDE_BAR' })}
-        className={state.sideBarOpen ? 'burger burger-squeeze open' : 'burger burger-squeeze'}
-      >
-        <div className="burger-lines" />
-      </div>
-    </Burger>
+    <Icon className={state.sideBarOpen ? 'open' : ''} onClick={() => dispatch({ type: 'TOGGLE_SIDE_BAR' })}>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </Icon>
   )
 }
 

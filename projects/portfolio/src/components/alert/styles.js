@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@nptech/theme-provider'
 import { motion } from 'framer-motion'
 
 export const Wrapper = styled(motion.div)`

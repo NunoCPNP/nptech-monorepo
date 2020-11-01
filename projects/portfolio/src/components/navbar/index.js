@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Wrapper } from './styles'
+import { Wrapper, Logo } from './styles'
 
 import BurgerIcon from '../burger-icon'
 
@@ -30,7 +30,9 @@ const Navbar = ({ navbar }) => {
     <Wrapper data-testid="navbar">
       <div className="container">
         <div className="navbar-logo">
-          <div></div>
+          <Logo>
+            <img src="/logo192.png" alt="Website logo" />
+          </Logo>
         </div>
         <div className="navbar-items">
           <motion.ul variants={container} initial="hidden" animate={'visible'}>

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
+import styled from '@nptech/theme-provider'
 
 import CTA from '../components/cta'
 

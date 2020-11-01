@@ -1,96 +1,88 @@
-import styled from '@emotion/styled'
+import styled from '@nptech/theme-provider'
 
-export const Burger = styled.div`
-  .burger {
-    height: 3em;
-    width: 3em;
-    position: relative;
-    font-size: 1rem;
-    cursor: pointer;
-  }
+export const Icon = styled.div`
+  font-size: 50%;
+  width: 6em;
+  height: 4.5em;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 
-  .burger .burger-lines:after {
-    left: 0;
-    top: -1em;
-  }
-
-  .burger .burger-lines:before {
-    left: 1em;
-    top: 1em;
-  }
-
-  .burger:after {
-    content: '';
+  span {
     display: block;
     position: absolute;
-    height: 150%;
-    width: 150%;
-    top: -25%;
-    left: -25%;
+    height: 0.6em;
+    width: 50%;
+    background: ${({ theme }) => theme.colors.white};
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
   }
 
-  .burger .burger-lines {
-    top: 50%;
-    margin-top: -0.125em;
+  span:nth-of-type(even) {
+    left: 50%;
+    border-radius: 0 0.9em 0.9em 0;
   }
 
-  .burger .burger-lines,
-  .burger .burger-lines:after,
-  .burger .burger-lines:before {
-    pointer-events: none;
-    display: block;
-    content: '';
-    width: 100%;
-    border-radius: 0.25em;
-    background-color: ${({ theme }) => theme.colors.white};
-    height: 0.25em;
-    position: absolute;
-    transform: rotate(0);
+  span:nth-of-type(odd) {
+    left: 0em;
+    border-radius: 0.9em 0 0 0.9em;
   }
 
-  .burger .burger-lines:after {
-    left: 0;
-    top: -1em;
+  span:nth-of-type(1),
+  span:nth-of-type(2) {
+    top: 0em;
   }
 
-  .burger .burger-lines:before {
-    left: 1em;
-    top: 1em;
+  span:nth-of-type(3),
+  span:nth-of-type(4) {
+    top: 1.8em;
   }
 
-  .burger.burger-squeeze .burger-lines,
-  .burger.burger-squeeze .burger-lines:after,
-  .burger.burger-squeeze .burger-lines:before {
-    transition: 0.2s top 0.2s, 0.1s left, 0.2s transform, 0.4s background-color 0.2s;
+  span:nth-of-type(5),
+  span:nth-of-type(6) {
+    top: 3.6em;
   }
 
-  .burger.burger-squeeze .burger-lines:after,
-  .burger.burger-squeeze .burger-lines:before {
-    width: 2em;
+  &.open span:nth-of-type(1),
+  &.open span:nth-of-type(6) {
+    transform: rotate(45deg);
   }
 
-  .burger.burger-squeeze.open .burger-lines,
-  .burger.burger-squeeze.open .burger-lines:after,
-  .burger.burger-squeeze.open .burger-lines:before {
-    transition: 0.2s background-color, 0.2s top, 0.2s left, 0.2s transform 0.15s;
-  }
-
-  .burger.burger-squeeze.open .burger-lines {
-    background-color: transparent;
-  }
-
-  .burger.burger-squeeze.open .burger-lines:before,
-  .burger.burger-squeeze.open .burger-lines:after {
-    left: 0.5em;
-    top: 0px;
-  }
-
-  .burger.burger-squeeze.open .burger-lines:before {
+  &.open span:nth-of-type(2),
+  &.open span:nth-of-type(5) {
     transform: rotate(-45deg);
   }
 
-  .burger.burger-squeeze.open .burger-lines:after {
-    transform: rotate(45deg);
+  &.open span:nth-of-type(1) {
+    left: 0.5em;
+    top: 0.7em;
+  }
+
+  &.open span:nth-of-type(2) {
+    left: calc(50% - 0.5em);
+    top: 0.7em;
+  }
+
+  &.open span:nth-of-type(3) {
+    left: -50%;
+    opacity: 0;
+  }
+
+  &.open span:nth-of-type(4) {
+    left: 100%;
+    opacity: 0;
+  }
+
+  &.open span:nth-of-type(5) {
+    left: 0.5em;
+    top: 2.9em;
+  }
+
+  &.open span:nth-of-type(6) {
+    left: calc(50% - 0.5em);
+    top: 2.9em;
   }
 
   @media only screen and (min-width: 769px) {

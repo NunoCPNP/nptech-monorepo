@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@nptech/theme-provider'
 
 export const StyledAnchor = styled('a')`
   display: inline-block;

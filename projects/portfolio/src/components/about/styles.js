@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@nptech/theme-provider'
 
 export const Wrapper = styled.div`
   grid-column: 1 /4;

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@nptech/theme-provider'
 import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import { dark, light } from '../styles/themes'
