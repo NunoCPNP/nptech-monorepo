@@ -86,6 +86,7 @@ export const data = () => {
         url: 'www.farfetch.com',
         source: '',
         image: '/cardBG.jpg',
+        background: '/farfetch.png',
         alt: 'Farfetch',
         description: [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec sollicitudin nibh. Nulla facilisi. Morbi viverra ligula non velit pellentesque vestibulum.',

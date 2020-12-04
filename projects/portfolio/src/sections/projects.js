@@ -56,7 +56,7 @@ const ProjectsSection = ({ projects }) => {
           <AnimatePresence exitBeforeEnter>
             <motion.div key="project-details" initial={{ x: '-100vw' }} animate={{ x: 0 }} exit={{ x: '100vw' }}>
               <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4} top={4}>
-                <Card img={project.image} alt={project.alt} />
+                <Card img={project.image} alt={project.alt} background={project.background} />
                 <ProjectDetails project={project} setProject={setProject} />
               </OneColumnGrid>
             </motion.div>

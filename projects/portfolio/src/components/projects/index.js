@@ -6,7 +6,7 @@ const Projects = ({ projects, setProject }) => {
   return (
     <>
       {projects &&
-        projects.map(({ id, image, alt }) => (
+        projects.map(({ id, image, alt, background }) => (
           <div
             key={id}
             onClick={() => {
@@ -14,7 +14,7 @@ const Projects = ({ projects, setProject }) => {
               setProject(project)
             }}
           >
-            <Card img={image} alt={alt} />
+            <Card img={image} alt={alt} background={background} />
           </div>
         ))}
     </>

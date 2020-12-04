@@ -20,7 +20,7 @@
     "version": "lerna version --conventional-commits --yes",
     "build:ui": "lerna run build --parallel --scope @nptech/theme-provider --scope @nptech/components",
     "build:portfolio": "lerna run build --scope @nptech/portfolio",
-    "storybook": "lerna run storybook --scope @nptech/components",
+    "storybook": "lerna run storybook --scope @nptech/components --stream",
     "portfolio": "lerna run dev --scope @nptech/portfolio --stream"
   },
   "lint-staged": {
